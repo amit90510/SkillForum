@@ -1,0 +1,198 @@
+﻿@model skillforum.Models.questionbank
+@{
+    ViewBag.Title = "questionbank";
+}
+
+
+
+<!-- =======================
+Page Banner END -->
+<!-- Tabs START -->
+<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="ebook" class="nav-link mb-2 mb-md-0" id="course-pills-tab-1">E-BOOK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="javacript:void(0)" class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-2">QUESTION BANK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="video" class="nav-link mb-2 mb-md-0" id="course-pills-tab-3">VIDEOS</a>
+    </li>
+
+
+</ul>
+<!-- Tabs END -->
+<!-- =======================
+Page content START -->
+<section class="pt-0">
+    <div class="container">
+
+        <!-- Filter bar START -->
+        <form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+            <div class="row g-3">
+                <!-- Input -->
+                <div class="col-xl-3">
+                    <input class="form-control me-1" id="keyword_input" type="search" placeholder="Enter keyword" onkeyup="fn_search_keyword()" />
+                </div>
+
+                <!-- Select item -->
+                <div class="col-xl-8">
+                    <div class="row g-3">
+                        <!-- Select items -->
+                        <div class="col-xl-4">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Course Scheme</option>
+                                <option>CTS</option>
+                                <option>ATS</option>
+                                <option>CITS</option>
+                            </select>
+                        </div>
+
+                        <!-- Search item -->
+                        <div class="col-xl-5">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Trade</option>
+                                <option>Electrician</option>
+                                <option>Fitter</option>
+                            </select>
+                        </div>
+
+
+                        <!-- Search item -->
+                        <div class="col-xl-3">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Language</option>
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                    </div> <!-- Row END -->
+                </div>
+                <!-- Button -->
+                <div class="col-xl-1">
+                    <button type="button" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+                </div>
+            </div> <!-- Row END -->
+        </form>
+        <!-- Filter bar END -->
+
+
+
+        <div class="row mt-3">
+            <!-- Main content START -->
+            <div class="col-12">
+
+
+
+                @if (Model != null)
+                {
+                    if (Model.usersinfo.Count > 0)
+                    {
+
+
+
+                        <!-- Course Grid START -->
+                        <div class="row g-4">
+
+                            @foreach (var item in Model.usersinfo)
+                            {
+
+
+                                if (item.pkContent_ID.ToLower() == "qb")
+                                {
+                                    var dataurl = Server.MapPath(item.pkContent_locat);
+                            <div class="col-sm-6 col-lg-4 col-xl-4  content_desc">
+                                <div class="card shadow h-100" id="card-d">
+
+
+
+                                    <embed src="@item.pkContent_locat">
+
+                                    <div class="card-body pb-0">
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="badge bg-purple bg-opacity-10 text-primary">@Html.DisplayFor(modelitem => item.pkCourse_ID) - @Html.DisplayFor(modelitem => item.pkTrade_ID)</span>
+                                        </div>
+
+                                        <p class="card-title fw-normal cbd" id="con_title" style="font-size: 14px;">@Html.DisplayFor(modelitem => item.pkDescription)</p>
+                                        <h6 class="card-title fw-normal cbd-pub">Publisher: @Html.DisplayFor(modelitem => item.publisher)</h6>
+
+
+
+                                        <span>
+
+                                            <p>@Html.DisplayFor(modelitem => item.language)</p>
+                                            <p>@Html.DisplayFor(modelitem => item.filesize)</p>
+
+                                            <br /> <a href="" target="_blank">Click here to View / Download</a>
+                                        </span>
+                                    </div>
+
+
+                                    </div>
+                                </div>
+                                }
+
+                                }
+
+                            </div>
+
+
+
+                    }
+                    else
+                    {
+                        <b>No Details Found.</b>
+                    }
+                }
+
+
+
+            </div>
+            <!-- Card item END -->
+            <!--</div>-->
+            <!-- Course Grid END -->
+            <!--</div>-->
+            <!-- Main content END -->
+            <!--</div>--><!-- Row END -->
+
+
+
+
+
+            <div class="row mt-3">
+                <!-- Main content START -->
+                <div class="col-12">
+
+                    <!-- Course Grid START -->
+
+
+
+
+
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- Card item END -->
+
+
+        </div>
+        <!-- Course Grid END -->
+
+    </div>
+    <!-- Main content END -->
+    </div><!-- Row END -->
+    <!--</div>
+    </section>-->
+    <!-- =======================
+    Page content END -->
+
+

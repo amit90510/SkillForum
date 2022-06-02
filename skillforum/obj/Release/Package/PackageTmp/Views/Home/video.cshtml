@@ -1,0 +1,253 @@
+﻿@model skillforum.Models.video
+@{
+    ViewBag.Title = "video";
+}
+
+
+<style>
+
+    .yt-video {
+        width: 100%;
+        padding-top: 56.25%;
+        position: relative;
+    }
+
+        .yt-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+</style>
+
+
+<!-- Tabs START -->
+<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="ebook" class="nav-link mb-2 mb-md-0" id="course-pills-tab-1">E-BOOK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="questionbank" class="nav-link mb-2 mb-md-0" id="course-pills-tab-2">QUESTION BANK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="javascript:void(0)" class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-3">VIDEOS</a>
+    </li>
+
+
+</ul>
+<!-- Tabs END -->
+<!-- =======================
+Page content START -->
+<section class="pt-0">
+    <div class="container">
+
+        <!-- Filter bar START -->
+        <form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+            <div class="row g-3">
+                <!-- Input -->
+                <div class="col-xl-3">
+                    <input class="form-control me-1" id="keyword_input" type="search" placeholder="Enter keyword" onkeyup="fn_search_keyword()" />
+                </div>
+
+            
+
+                <!-- Select item -->
+                <div class="col-xl-8">
+                    <div class="row g-3">
+                        <!-- Select items -->
+                        <div class="col-xl-4">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Course Scheme</option>
+                                <option>CTS</option>
+                                <option>ATS</option>
+                                <option>CITS</option>
+                            </select>
+                        </div>
+
+                        <!-- Search item -->
+                        <div class="col-xl-5">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Trade</option>
+                                <option>Electrician</option>
+                                <option>Fitter</option>
+                            </select>
+                        </div>
+
+
+                        <!-- Search item -->
+                        <div class="col-xl-3">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Language</option>
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                    </div> <!-- Row END -->
+                </div>
+                <!-- Button -->
+                <div class="col-xl-1">
+                    <button type="button" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+                </div>
+            </div> <!-- Row END -->
+        </form>
+        <!-- Filter bar END -->
+
+        <div class="row mt-3">
+            <!-- Main content START -->
+            <div class="col-12">
+
+                <!-- Course Grid START -->
+                <div class="row g-4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--
+    @foreach (var item in Model.usersinfo)
+    {
+        if (item.pkContent_ID.ToLower() == "video")
+        {
+
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="card shadow h-100">
+                    <div class="yt-video">
+                        <iframe width1="400" height1="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p>  @Html.DisplayFor(modelitem => item.pkDescription)  </p>
+                </div>
+            </div>
+        }
+
+
+    }
+    -->
+
+
+
+
+
+
+
+
+
+
+
+
+                    @foreach (var item in Model.usersinfo)
+                    {
+                        if (item.pkContent_ID.ToLower() == "video")
+                        {
+
+                            <div class="col-sm-6 col-lg-4 col-xl-3  content_desc">
+                                <div class="card shadow h-100" id="card-d">
+                                    <!-- Image -->
+                                    <div class="yt-video">
+                                        <iframe width1="400" height1="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- Card body -->
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-purple bg-opacity-10 text-primary">CTS</a>
+                                        </div>
+                                        <!-- Title -->
+                                        <P class="card-title fw-normal" id="vid_title" style="font-size: 14px;">@Html.DisplayFor(modelitem => item.pkDescription)</P>
+                                        <h6 class="card-title fw-normal">@Html.DisplayFor(modelitem => item.publisher)</h6>
+                                        <h6 class="card-title fw-normal">@Html.DisplayFor(modelitem => item.language)</h6>
+
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>@Html.DisplayFor(modelitem => item.filesize)</span>
+                                            <span class="h6 fw-light mb-0"><i class="fas fa-table text-orange me-2"></i>Hindi</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        }
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+                    <!--
+
+    <table class="index-table">
+        @foreach (var item in Model.usersinfo)
+        {
+            if (item.pkContent_ID.ToLower() == "video")
+            {
+
+                <tr class="content_desc">
+                    <td>  <iframe width="400" height="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)"></iframe>   </td>
+                    <td>  @Html.DisplayFor(modelitem => item.pkDescription)  </td>
+                </tr>
+            }
+
+
+        }
+    </table>
+
+        -->
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- Card item END -->
+
+
+        </div>
+        <!-- Course Grid END -->
+
+    </div>
+    <!-- Main content END -->
+    </div><!-- Row END -->
+    </div>
+</section>
+<!-- =======================
+Page content END -->
+
+
+<script>
+
+    var content = document.getElementById("card-c");
+    for (var i = 0; i < $("#vid_tite").length; i++) {
+        var el = $("#vid_title")[i];
+        if (el.innerHTML.length > 3)
+            el.innerHTML = el.innerHTML.slice(0, 3) + "...";
+    }
+
+
+</script>

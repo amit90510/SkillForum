@@ -1,0 +1,357 @@
+﻿@model skillforum.Models.video
+@{
+    ViewBag.Title = "video";
+}
+
+
+<style>
+
+    .yt-video {
+        width: 100%;
+        padding-top: 56.25%;
+        position: relative;
+    }
+
+        .yt-video iframe {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+</style>
+
+
+<!-- Tabs START -->
+<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="ebook" class="nav-link mb-2 mb-md-0" id="course-pills-tab-1">E-BOOK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="questionbank" class="nav-link mb-2 mb-md-0" id="course-pills-tab-2">QUESTION BANK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="javascript:void(0)" class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-3">VIDEOS</a>
+    </li>
+
+
+</ul>
+<!-- Tabs END -->
+<!-- =======================
+Page content START -->
+<section class="pt-0">
+    <div class="container">
+
+        <!-- Filter bar START -->
+        <form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+            <div class="row g-3">
+                <!-- Input -->
+                <div class="col-xl-3">
+                    <input class="form-control me-1" id="keyword_input" type="search" placeholder="Enter keyword" onkeyup="fn_search_keyword()" />
+                </div>
+
+            
+
+                <!-- Select item -->
+                <div class="col-xl-8">
+                    <div class="row g-3">
+                        <!-- Select items -->
+                        <div class="col-xl-4">
+                            <select class="form-control" id="CourseDropDownList" aria-label=".form-select-sm example">
+                                <option value="">Course Scheme</option>
+                            </select>
+                        </div>
+
+                        <script type="text/jscript">
+                            $.getJSON('/Home/GetCourse/', function (data) {
+                                if (data) {
+                                    $('#CourseDropDownList').html(''); 
+                                    var options = '';
+                                    options += '<option value="">Course Scheme</option>';
+
+                                    const myArray = data.split(";");
+                                    for (var i = 0; i < myArray.length; i++) {
+                                        if (myArray[i]) {
+                                            options += '<option value="' + myArray[i] + '">' + myArray[i] + '</option>';
+                                        }
+                                    }
+                                    $('#CourseDropDownList').append(options);  
+                                }
+                            });
+                        </script>
+
+                        <!-- Search item -->
+                        <div class="col-xl-5">
+
+                            @*@Html.DropDownList("pkTrade_ID")*@
+
+                            <select class="form-control" id="pkTrade_ID" aria-label=".form-select-sm example">
+                                <option value="">Trade Scheme</option>
+                            </select>
+
+                            <!--<select class="form-control" aria-label=".form-select-sm example" id="trade_input1" onchange="fn_search_trade()">
+        <option value="">Trade</option>
+        <option>Electrician</option>
+       
+    </select>-->
+                        </div>
+
+                        <script>
+
+                            document.getElementById("pkTrade_ID").classList.add("form-control");
+                            document.getElementById("pkTrade_ID").setAttribute("onchange", "fn_search_trade()");
+                            document.getElementById("CourseDropDownList").setAttribute("onchange", "fn_search_trades()");
+                        </script>
+
+
+                        <!-- Search item -->
+                        <div class="col-xl-3">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Language</option>
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                    </div> <!-- Row END -->
+                </div>
+                <!-- Button -->
+                <div class="col-xl-1">
+                    <button type="button" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+                </div>
+            </div> <!-- Row END -->
+        </form>
+        <!-- Filter bar END -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        <div class="row mt-3">
+            <!-- Main content START -->
+            <div class="col-12">
+
+                <!-- Course Grid START -->
+                <div class="row g-4">
+
+
+
+
+
+
+
+
+
+
+
+
+
+                    <!--
+    @foreach (var item in Model.usersinfo)
+    {
+        if (item.pkContent_ID.ToLower() == "video")
+        {
+
+            <div class="col-sm-6 col-lg-4 col-xl-3">
+                <div class="card shadow h-100">
+                    <div class="yt-video">
+                        <iframe width1="400" height1="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                    </div>
+                    <p>  @Html.DisplayFor(modelitem => item.pkDescription)  </p>
+                </div>
+            </div>
+        }
+
+
+    }
+    -->
+
+
+
+
+
+
+                    <style>
+                      .cbd { font-size: 15px; color: #030303; line-height: 20px; } 
+                      .cbd-pub { font-size: 12px; color: #606060; }
+                        .card-footer.pt-0.pb-3 hr { margin: 1rem -1rem; }
+                    </style>
+
+
+
+
+
+                    @foreach (var item in Model.usersinfo)
+                    {
+                        if (item.pkContent_ID.ToLower() == "video")
+                        {
+
+                            <div class="col-sm-6 col-lg-4 col-xl-4  content_desc">
+                                <div class="card shadow h-100" id="card-d">
+                                    <!-- Image -->
+                                    <div class="yt-video">
+                                        <iframe width1="400" height1="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                                    </div>
+                                    <!-- Card body -->
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <span class="bg-purple bg-opacity-10 text-primary" style="font-size: 13px;">@Html.DisplayFor(modelitem => item.pkCourse_ID) - @Html.DisplayFor(modelitem => item.pkTrade_ID)</span>
+                                        </div>
+                                        <!-- Title -->
+                                        
+
+                                            <p class="card-title fw-normal cbd" id="con_title" style="font-size: 14px;">@Html.DisplayFor(modelitem => item.pkDescription)</p>
+                                            <h6 class="card-title fw-normal cbd-pub">Publisher: @Html.DisplayFor(modelitem => item.publisher)</h6>
+
+
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0"><i class="far fa-clock text-danger me-2"></i>@Html.DisplayFor(modelitem => item.filesize)</span>
+                                            <span class="h6 fw-light mb-0"><i class="fas fa-file-alt text-orange me-2"></i>@Html.DisplayFor(modelitem => item.language)</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+
+
+                        }
+
+
+                    }
+
+
+
+
+
+
+
+
+
+
+
+                    <!--
+
+    <table class="index-table">
+        @foreach (var item in Model.usersinfo)
+        {
+            if (item.pkContent_ID.ToLower() == "video")
+            {
+
+                <tr class="content_desc">
+                    <td>  <iframe width="400" height="250" src="https://www.youtube.com/embed/@Html.DisplayFor(modelitem => item.Embedd)"></iframe>   </td>
+                    <td>  @Html.DisplayFor(modelitem => item.pkDescription)  </td>
+                </tr>
+            }
+
+
+        }
+    </table>
+
+        -->
+
+
+
+
+
+
+
+                </div>
+            </div>
+            <!-- Card item END -->
+
+
+        </div>
+        <!-- Course Grid END -->
+
+    </div>
+</section>
+<!-- =======================
+Page content END -->
+
+
+<script>
+
+    
+    function fn_search_trade() {
+        trade_input = document.getElementById("pkTrade_ID");
+        trade_filter = trade_input.value.toUpperCase();
+        content_desc = document.getElementsByClassName("content_desc");
+        for (i = 0; i < content_desc.length; i++) {
+            txtValue = content_desc[i].textContent || content_desc[i].innerText;
+            if (txtValue.toUpperCase().indexOf(trade_filter) > -1) {
+                content_desc[i].style.display = "";
+            } else {
+                content_desc[i].style.display = "none";
+            }
+        }
+    }
+
+    function fn_search_trades() {
+        if ($('#CourseDropDownList').val()) {
+            $.getJSON('/Home/GetVideosTrade?course=' + $('#CourseDropDownList').val(), function (data) {
+                if (data) {
+                    $('#pkTrade_ID').html('');
+                    var options = '';
+                    options += '<option value="">Trade Scheme</option>';
+
+                    const myArray = data.split(";");
+                    for (var i = 0; i < myArray.length; i++) {
+                        if (myArray[i]) {
+                            options += '<option value="' + myArray[i] + '">' + myArray[i] + '</option>';
+                        }
+                    }
+                    $('#pkTrade_ID').append(options);
+                }
+            });
+        }
+        else {
+            $('#pkTrade_ID').html('');
+            var options = '';
+            options += '<option value="">Trade Scheme</option>';
+            $('#pkTrade_ID').append(options);
+        }
+    }
+   
+
+
+    //var mycode = {};
+    //$("select[id='pkTrade_ID'] > option").each(function () {
+    //    if (mycode[this.text]) {
+    //        $(this).remove();
+    //    } else {
+    //        mycode[this.text] = this.value;
+    //    }
+    //});
+
+
+    
+    //var eku = document.getElementsByTagName('p');
+    //for (i=0; i<eku.length; i++) {
+    //    if (eku[i].id == "con_title") {
+    //        if (eku[i].textContent.length > 20) {
+    //            eku[i].innerHTML = eku[i].innerHTML.substring(0, 32) + "...";
+    //        }
+    //        else { eku[i].innerHTML; }
+    //    }
+    //}
+    
+    
+    
+</script>

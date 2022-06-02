@@ -1,0 +1,527 @@
+﻿    @model skillforum.Models.Dashboard
+    @{
+    ViewBag.Title = "Dashboard";
+}
+
+
+
+
+
+
+
+<!-- =======================
+Main part START -->
+<section class="pt-4 pt-sm-5">
+    <div class="container">
+        <div class="row g-4 g-md-5 justify-content-between">
+
+            <!-- Content START -->
+            <div class="col-lg-6 mb-5 mb-lg-0">
+
+                <br />
+                <img src="~/Content/assets/images/client/upload.png" />
+
+
+
+
+
+
+            </div>
+            <!-- Content END -->
+
+            <div class="col-lg-6 mb-5">
+                <div class="bg-dark rounded-3 p-4 p-sm-5 position-relative">
+
+                    <!-- SVG decoration -->
+                    <figure class="position-absolute top-0 start-50 translate-middle w-100 mt-n1">
+                        <svg enable-background="new 0 0 420.7 53.6" version="1.1" viewBox="0 0 420.7 53.6" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-dark" d="m325.3 53.6v-48.4h-14.5l0.5 4v3.1l-1.6 3.2 0.2 0.1c3.7 0 6.8 3 6.8 6.8 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.4l-1.8-1.6h-9.5v4h-2.5v1.8l1.4 1.7-1.4 1.4 3.4 1.4-4 0.6c2.3 1.1 4 3.4 4 6.2 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-3.2 2.2-5.9 5.2-6.6l-1.8-2.9 1.9-4.3-0.1-3.3h-17.3v2.5l-6.6 2.2v3.2l2 2.4h-0.1c3.3 0.5 5.8 3.3 5.8 6.7 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-1.7 0.6-3.2 1.7-4.4l-0.2-3.1-2.3-0.6v-5.4h1.6v-3.5h-10.6l-3.7 3.8v7.2l-0.9 0.2c2.1 1.2 3.5 3.3 3.5 5.9 0 3.7-3 6.8-6.8 6.8s-6.8-3-6.8-6.8c0-1.7 0.7-3.3 1.8-4.5v-10l-1.2-2.5h-15.6v1.6l-2.7 1.3-1.3 3.2 4 3.6v1.1c2.5 1 4.2 3.4 4.2 6.3 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-2.5 1.4-4.7 3.5-5.9l-1.7-0.3 0.2-1.2h2.4v-2.3l-9.4-7.4h-11.8l-0.9 0.7 1.6 3.2v3.1l-1.6 2.2v1l0.2 0.1c3.7 0 6.8 3 6.8 6.8 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.4l-1.7-1.6h-9.5v4h-2.7v1.8l1.4 1.7-0.4 2.6-1.6 0.9c2.3 1.1 4 3.4 4 6.2 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-3.2 2.2-5.9 5.2-6.6l-1.8-2.9 1.9-4.3-0.1-3.3h-25.3v2.6l2.9 2.6v3l1.9 2.5c1.8 0.7 3.3 2 4 3.8 0.4 0.8 0.6 1.7 0.6 2.7 0 3.7-3 6.8-6.8 6.8-2.8 0-5.3-1.8-6.3-4.2-0.4-0.8-0.6-1.7-0.6-2.7 0-2 0.9-3.7 2.2-5h-0.2l0.2-0.8-2.4-1.6v-3l0.8-1.6 0.5-5.2h-10.7l-3.9 4v7.2l-0.9 0.2c2.1 1.2 3.5 3.3 3.5 5.9 0 3.7-3 6.8-6.8 6.8s-6.8-3-6.8-6.8c0-1.7 0.7-3.3 1.8-4.5v-10l-1.3-2.7h-15.5v1.7l-2.7 1.3-1.3 3.2 4 3.6v1.1c2.5 1 4.2 3.4 4.2 6.3 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-2.5 1.4-4.7 3.5-5.9l-1.7-0.3 0.2-1.2h2.4v-2.3l-9.6-7.6h-11.3l-1.3 0.9 1.6 3.2v3.1l-1.6 2.2v1l0.2 0.1c3.7 0 6.8 3 6.8 6.8s-3 6.8-6.8 6.8c-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.3l-2-1.7h-9.3v4.3h-2.7v1.8l1.4 1.7-2 3.4c2.3 1.1 4 3.4 4 6.2 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-3.2 2.2-5.9 5.2-6.6l-1.6-2.8 1.9-4.3-0.2-3.7h-21.5l-1.6 1.1 1.6 3.2v3.1l-1.6 2.2v1l0.2 0.1c3.7 0 6.8 3 6.8 6.8 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.4l-2.1-2h-7.6v48.3h325.3z" />
+                        <path class="fill-dark" d="m420.8 50.9c0.2-0.7 0.3-1.4 0.4-2.1-0.5-3.7-0.4-7.7-0.2-11.7-0.2-2.6-0.4-5.2-0.4-7.7 0-7.6 0.7-15.2 0.6-22.8 0-0.5 0.1-0.9 0.2-1.3h-6l-3.9 4v7.2l-0.9 0.2c2.1 1.2 3.5 3.3 3.5 5.9 0 3.7-3 6.8-6.8 6.8s-6.8-3-6.8-6.8c0-1.7 0.7-3.3 1.8-4.5v-10l-1.3-2.9h-15.5v1.8l-2.7 1.3-1.3 3.2 4 3.6v1.1c2.5 1 4.2 3.4 4.2 6.3 0 3.7-3 6.8-6.8 6.8s-6.8-3-6.8-6.8c0-2.5 1.4-4.7 3.5-5.9l-1.7-0.3 0.2-1.2h2.4v-2.3l-9.6-7.6h-11.3l-1.3 0.9 1.6 3.2v3.1l-1.6 2.2v1l0.2 0.1c3.7 0 6.8 3 6.8 6.8s-3 6.8-6.8 6.8c-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.3l-2-1.7h-9.3v4.3h-2.7v1.8l1.4 1.7-2 3.4c2.3 1.1 4 3.4 4 6.2 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-3.2 2.2-5.9 5.2-6.6l-1.8-2.9 1.9-4.3-0.2-3.7h-21.3l-1.6 1.1 1.6 3.2v3.1l-1.6 2.2v1l0.2 0.1c3.7 0 6.8 3 6.8 6.8 0 3.7-3 6.8-6.8 6.8-3.7 0-6.8-3-6.8-6.8 0-1.7 0.7-3.3 1.7-4.5h-0.2l0.3-0.1c0.5-0.6 1.1-1 1.8-1.4l-1.3-2.7-2.6-0.5v-6.3l-2.2-1.9h-7.6v48.3h128.2c-0.2-0.8-0.3-1.7-0.1-2.7z" />
+						</svg>
+                    </figure>
+
+                    <!-- SVG decoration -->
+                    <figure class="w-100 position-absolute top-100 start-50 translate-middle">
+                        <svg enable-background="new 0 0 607.7 74.6" version="1.1" viewBox="0 0 607.7 74.6" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-dark" d="m594.7-522.8c-3.3-1.3-4.9 1.8-5.3 3.2 0-0.2 0.1-0.5 0.1-0.8-3.9 2.7-9.3-5.1-11.1 0.3 5.2-1.3-8.7 3.6-9.8-0.9-3.6-7.5-7.8-8.8-13.5-2.5-2.4-4.6-13.7-0.7-13-5.1-3.7 0.9-10.7-0.3-22.2-0.2-9.1 2.6-14.4 0-21.9 0-4.2 0.3-8.3-5.9-12.5 0.1-4.2-2.2-8.6 3.5-11.5-3-1.1 1.3-0.8-3-2.1-3.9-3.2 1.1-12.3-0.1-16.1-1.2-9-2.7-17.9-0.7-26.9 0-4.4 3.3-8.9 3.2-13.3 0-5.9-1.5-11.6-6.3-17.5-1.4-5.4-6-9.7 4.5-14.1 1.4-2.4 2.6-5.4-4.8-8 2.8-5.5-2.2-8.9-2.6-13.7 1.9-3 3.1-3.8 7.3-8 3.2-3.6-4.3-5.4-5.3-8.3 2.8-1.5 2.3-2.5 4.5-4.2 2.7-4.2-0.6-12.7-0.3-17 0-7.2-8-14.3-1.1-21.5 0-5.5-10.9-11-3.5-16.5 0-2.7-2.8-7 2.7-9.6 0.2-3-6.9-1.6-6-4.1-2.6-3.9-3.4-7.7-0.3-12.5-6.5-4.3-2.4-7.5-2.8-12-1.7-5.8-0.1-10.5-0.1-16.1-2.7-4.7-6.2-8 2.4-11.5-2.8-1.7 2.8-3 0.7-4.7-3.7-5.1-9.4-10.8-1.2-17.6-6.9-9.8-5.8-19.1 6.1-28.7 1.5-4 3.3-9.6 2.2-13.1 0.6-4.6-3.8-8.2 5.9-12.4 8.7-4.5-4.8-8.5-0.1-13.5 2.9-5.6 3.4-6.9 8.5-10.7 7.2-4.5 9-13.2 2.7-19.4 2.1-9.2-3-17.3 8.2-26.1-1.3-5.2-0.3-7.1 6.9-11.7-1.9-5.1 0.7-9.3-3.4-13.2-1-6.6 2.5-5.1-0.2-8.4 1.3-3.1 1.6-7.6 6.3-10.8 1.4-6.1 4-16.9 7.2-16.4 5.8-5.7 1.9-8.7-4.4-11.2-6.5 0-3-1-4-2.8-4.1-0.3 328.4-0.3 209.6-0.3 595.9 0.6 6.6 9.4-1.2 9.5 1.4 1.8 0 4.7 10.9 6.7 3.2 6.2 5.1 10.5 1.6 14.9 1.2 6.1 11.7 7.8 4.5 15 0.3 5-12.8 9.3-3.4 12.7-1.7 2-1.2 3.6 0.4 3.8-1.5 1 6 4 14.8 4.4-5.1-0.4-2.6-0.7-4.3-1-5.3 0.5 0.9 1.3 1.9 2.6 2.9 1 2.6 5.9 3.3 6.4-1.1 5.8-0.8 8.5-6.1 11.2-6.5 2.5-9.2 3.8 4 7.7-4.5 3.4-3.9 5.2-4.2 8.3-2.7 1.9-0.4 3.7-3.6 5.6-1.1 2.3-0.4 3.3-6.5 5.9-3.8 2.8 7.6 4.2-3.8 6.6 1.3 2.5 6.1 5.1 3.5 7.7 0.7 2.7 5.4 5-7.9 7.7 1.1 2.4-2.8 4.1-6.4 6.2 2.8 4.7-1.2 10 0.5 15.5 7.9 4.8 0.7 9.8 9.6 14.8 0.3 5 5.7 10-5 14.9-0.4 5.4-5.3 10.9 0.3 16.3 0 6 8.7 9.7 15.5 14.7 5.2 3.7 4.8 6.9 13.2 11.6 3.9 2 7.5 4.5 2.5 6.5 0.2 3.6-1.6 6.3-6.2 10-3.2 7.1 10.8 14.4-4.4 21.5 0.1 1.7 2.5 3.5-3.8 5.2 0.1 3.7 1.3 6.8 3.9 10.3-3 2.5-0.8 5.3-0.3 7.8 0 4.4-1.7 8.5-1.9 12.8-1.6 6 2.7 10.6-6.1 16.1 3.5 4.1 3.5 8.4 9.1 13 5.7 3.1 0.7 5.7-0.4 8.8 0.6 5.2 3.5 9 7.9 14.3 2.3 4.8-0.3 8.9-7 13.5 1.2 7.3 0.6 14.4 9.7 22 1.8 5.3 0.2 10.5-14.1 15.8 0.1 6.7 0.5 12.4 0.2 18.7-7.7 2.7 3.4 5.3 3.4 8-1.4 3.2 6.5 4.5-3 7.4-4.3 1.1-4.5 3.1 3.8 4.3-0.6 2.5 3 4.8-7.8 7.3-2.4 3.7 0.2 7.9-1.4 11.7-0.3 5.8-4.3 11.6 8.3 17.4 0 6.3-1.1 12 1.5 18.3-1.5 1.9-5.7 4.3-3.2 5.9-0.6 1.8-0.8 1-4.5 3.3-4 2.8-0.6 7.8-1.7 10.5 0.1 3.2-0.2 6.5 1.6 9.7 0 3.2 6.3 5.3 4.3 10.6 0.1 1.9 2.3 6.1-1.2 6.4-1.6 2.5 0.8 6.4 4.6 6.6 0.3 0.3-2.4 4.3 8.9 7 6.8 3.4 6.1 4.7-1 6.9 1.7 0 0.7 0.9 6.2 3.3 0.7-1.1 9.3 1-4.3 1.3 1.8 6.1 12.4 7.9 18.4 14.7 11.7 4.2 4.4 5-4.7 8.4 3.5 4.7-4.1 7.6-1 11.8 1.8l0.9 0.9v-597.7c-9.4-3.4-13.5-4.1-13 1.1z" />
+						</svg>
+                    </figure>
+
+                    <!-- SVG decoration -->
+                    <figure class="position-absolute top-0 end-0 mt-5 me-5">
+                        <svg width="38.4px" height="42.4px">
+                            <path class="fill-info" d="M23.5,32.8c2.7-1.6,5.1-3.1,7.4-4.5c0.6-0.4,1.2-0.3,1.5,0.3c1.8,4.1,3.7,8.1,4.7,12.5c0,0.1,0,0.1,0,0.2 c-0.6,0.8-1.4,0.7-2.1,0.2c-2.8-1.8-5.5-3.8-8.4-5.4c-4-2.3-6.6-6-9.5-9.4c-2.7-3.2-5.4-6.6-8-9.9c-0.8-1-1.5-1.9-1.7-3.2 C12.7,20,17.9,26.6,23.5,32.8z M30.9,29.3c-2.3,1.3-4.5,2.4-6.4,4.3c2.3,1.5,4.4,2.9,6.5,4.3c0.9-0.9,1.7-1.7,2.6-2.4 C32.7,33.4,31.9,31.5,30.9,29.3z M35,40.5c0-1.6-0.5-2.8-1.2-4.1c-0.7,0.8-1.2,1.4-1.9,2.2C33,39.3,33.9,39.8,35,40.5z"></path>
+                            <path class="fill-info" d="M8,13c1.6-2,4.1-3,6-5c-0.4-0.4-0.8-0.8-1.1-1.1C11,8.3,9.3,9.4,7.6,10.7c-0.9,0.7-1.8,1.4-1.4,3.1 c-2.6-2.1-4.8-4-5.1-7.2C0.9,4.7,1.7,3.1,3.3,2c1.6-1.2,3.4-1.4,5.2-0.5c2.1,1.1,3.7,2.9,5.2,4.6c0.5,0.6,0.8,1.4,1.8,1.4 c0.2,0,0.4,0.3,0.5,0.4c4.8,6,9.7,12,13.6,18.6c0.2,0.3,0.3,0.7,0.5,1c-0.1,0.1-0.2,0.1-0.3,0.2c-0.4-0.5-0.9-0.9-1.2-1.4 c-1.9-2.6-3.6-5.4-5.5-7.9c-2.3-3-4.6-5.9-7-8.8c-1-1.2-1.1-1.2-2.4-0.1c-1.5,1.2-3.1,2.4-4.7,3.6c-0.2,0.2-0.5,0.2-0.8,0.3 C8.1,13.2,8,13.1,8,13z M12.1,5.8C10.7,4,9.5,3.1,8.2,2.4C6.5,1.6,4.9,1.7,3.4,3.1C2.2,4.2,1.7,5.6,2.2,7.3c0.5,1.8,1.5,3.2,3.1,4.3 C7.3,9.4,10.2,8.3,12.1,5.8z"></path>
+                        </svg>
+                    </figure>
+
+                    <!-- SVG decoration -->
+                    <div class="position-absolute bottom-0 end-0 mb-n5 w-100">
+                        <svg enable-background="new 0 0 223 134" xml:space="preserve" xmlns="http://www.w3.org/2000/svg">
+                        <path class="fill-white" d="m216.6 78.7c-1.8-0.3-4.1 0.1-5.9 0.3-2.4 0.2-4.8 0.7-7.1 0.9-1.6 0.1-3.1 0.2-4.6 0.3-1.8 0.1-3.7 0.1-5.6 0.1-1.3-0.1-2.6-0.1-3.9-0.1-2.5 0-4.9-0.3-7.3-0.4-2.3-0.1-4.5 0.5-6.8 0.5-4 0.1-8.6-0.3-12.2 1.6-0.2 0.1-0.2 0.5-0.1 0.6 0.6 1.1 2.6 1.6 3.7 2 0.3 0.1 0.7 0.3 1 0.3 0.9 0.6 1.8 1.2 2.8 1.8 0.7 0.5 1.5 0.8 2.2 1.2 0.1 0.1 0.3 0.2 0.4 0.3 0.3 0.2 1 0.4 1.2 0.7 0.3 0.5 0 1.6-0.1 2.1-0.3 1.3-0.6 2.5-0.8 3.8-0.3 2.1-1 4.1-1.5 6-0.1 0.1-0.3 0.3-0.4 0.5-0.3 0.4 0.1 0.8 0.5 0.7v0.2c0 0.2 0.4 0.1 0.5 0 0.2-0.1 0.3-0.3 0.5-0.4s0.3-0.2 0.5-0.3c2-0.8 4-1.5 5.8-2.6 0.7 1.4 1.4 2.9 2 4.3 0.5 1.1 1.4 3.1 2.9 3.2 1.8 0.1 3.8-2.6 5.1-3.7 2.1-1.6 4.4-3.1 6.5-4.7 3.9-2.8 7.7-5.7 11.4-8.8 0.9-0.8 1.4-1.8 2.3-2.6 1-1 2.2-1.6 3.3-2.4 0.9-0.7 1.5-1.5 2.2-2.3 0.7-0.7 1.6-1.5 2.1-2.5-0.2-0.3-0.3-0.6-0.6-0.6zm-46.5 7 0.6 0.3 0.9 0.6c-0.6-0.3-1.1-0.6-1.5-0.9zm2.4 0.6c-0.7-0.7-1.2-1-2.1-1.4-1.2-0.5-2.6-1-3.8-1.4h-0.1c-0.3-0.2-0.7-0.4-1-0.5-0.5-0.3-1.5-0.4-0.9-0.9 0.2-0.1 0.7-0.1 0.9-0.2 1.2-0.3 2.4-0.5 3.7-0.7 2.6-0.1 5.2 0.1 7.5-0.1 1.2-0.1 2.3-0.2 3.5-0.3h1.9 0.1c0.7 0 1.4 0.1 2.2 0.1 1.9 0.2 3.8 0.1 5.7 0.2 4.3 0.1 8.4 0.1 12.7-0.3 2.1-0.2 4.2-0.5 6.3-0.7 1.2-0.1 2.3-0.2 3.5-0.2-0.5 0.1-1 0.3-1.5 0.3-1.8 0.3-3.5 0.6-5.2 0.9-3.4 0.4-6.8 0.9-10.1 1.6-3.4 0.7-6.8 1.5-10.3 2.2-3.7 0.7-7 2.4-10.7 3.3-0.1-0.1-0.2-0.1-0.3-0.1-0.6-0.9-1.2-1.1-2-1.8zm1.5 9.8c0.1-0.5 0.3-0.9 0.4-1.3 0.3-1.1 0.4-2.3 0.6-3.5 0.1-0.8 0.4-1.6 0.4-2.5 0 0 0-0.1 0.1-0.1 0.3-0.2 1.8-0.3 2-0.3 1.4-0.4 2.9-1 4.3-1.5 1.2-0.5 2.5-0.9 3.8-1.2 3.3-0.7 6.5-1.3 9.8-2.2 3.5-0.9 7.1-1.2 10.7-1.7 1.6-0.2 3.3-0.5 4.9-0.8 1-0.2 2-0.5 3.1-0.7-0.6 0.3-1.2 0.7-1.9 1-1.2 0.5-2.4 0.8-3.6 1.2-2.5 1.1-4.8 2.5-7.1 3.8-1 0.4-2 0.8-3.1 1.2-2.2 0.9-4.3 1.8-6.4 2.7-1.5 0.6-3.1 1.1-4.6 1.8-1.1 0.5-2.2 1-3.3 1.5-0.2 0.1-0.5 0.2-0.7 0.3-0.5 0.2-1 0.4-1.4 0.5-1.1 0.3-2.4 0.6-3.3 1.1-0.1-0.1-0.3-0.1-0.4 0.1-1.3 0.9-2.6 2-3.8 2.9-0.3 0.3-0.7 0.5-1 0.8 0.1-0.8 0.3-1.9 0.5-3.1zm4.7 1.9c-1.4 0.8-3.1 1.4-4.6 2 0.1-0.2 0.3-0.3 0.3-0.4 0.3-0.2 0.5-0.3 0.7-0.5 1-0.9 2.1-1.8 3.2-2.6 0.2 0.5 0.4 0.9 0.6 1.4-0.1 0.1-0.2 0.1-0.2 0.1zm34.9-16.3c-0.5 0.4-0.9 0.9-1.3 1.2l-0.4 0.4c-0.2 0.1-0.3 0.3-0.5 0.4-1 0.7-2 1.4-2.9 2.2-0.5 0.5-0.9 1-1.2 1.5-1 0.9-1.9 1.8-2.9 2.6-0.8 0.6-1.6 1.2-2.3 1.8-1.6 1.4-3.4 2.7-5.2 4-3.3 2.4-6.7 4.6-9.8 7.3-0.7 0.5-1.2 1-1.9 1.6-0.7 0.4-1.3 0.5-2-0.1-0.2-0.3-0.3-0.7-0.4-0.9-0.5-1-1-2-1.4-3-0.7-1.6-1.2-3.3-2.3-4.6 1.4-0.8 3.4-1 4.8-1.6s2.8-1.5 4.3-2l9.6-3.6c2.9-1.2 5.4-2.7 8.2-4.1 0.1-0.1 0.3-0.1 0.4-0.1 1.7-0.7 3.3-1.6 5-2.3 0.7-0.3 1.4-0.5 2.1-0.8 0.1-0.1 0.3-0.2 0.5-0.3l-0.4 0.4z" />
+                        <path class="fill-white" d="m89.1 0c-0.5 0-1 0.1-1.4 0.3-0.3 0.1-0.5 0.3-0.8 0.3-0.3 0.1-0.6 0-0.9 0.1-0.1 0-0.3 0.2-0.3 0.3v0.2c-0.1 0.5 0.7 0.8 0.9 0.3 0.4-0.1 0.7 0 1.1-0.2 0.5-0.3 0.9-0.4 1.4-0.4 0.6 0 0.6-0.9 0-0.9z" />
+                        <path class="fill-white" d="m77.1 0.9c-0.7 0-1.4-0.1-2.2-0.1-0.6 0-1.4 0-1.8 0.5s0.3 1.1 0.7 0.7c0.3-0.3 1.2-0.2 1.6-0.2 0.5 0 1.1 0.1 1.6 0.1 0.7-0.1 0.7-1 0.1-1z" />
+                        <path class="fill-white" d="m65.5 1.5h-2.9c-0.6 0-0.6 0.9 0 0.9h2.9c0.6 0 0.6-0.9 0-0.9z" />
+                        <path class="fill-white" d="m55.7 2.1c-0.9-0.3-2.7-0.7-3.1 0.5-0.1 0.6 0.7 0.8 0.9 0.3 0.1-0.4 1.7 0 2 0.1 0.5 0.2 0.7-0.6 0.2-0.9z" />
+                        <path class="fill-white" d="m46.1 2.7c-0.7 0-1.3-0.1-2 0s-1.2 0.4-1.8 0.4-0.6 0.9 0 0.9 1.1-0.2 1.6-0.3c0.7-0.2 1.4-0.1 2.2-0.1 0.6 0.1 0.6-0.9 0-0.9z" />
+                        <path class="fill-white" d="m35 4.5c-1 0.4-2.3 0.6-3.1 1.4-0.5 0.4 0.2 1 0.7 0.7 0.7-0.7 1.8-0.9 2.7-1.2 0.5-0.3 0.3-1.1-0.3-0.9z" />
+                        <path class="fill-white" d="m24 9c-0.6 0.5-1.6 0.6-1.8 1.4-0.1 0.6 0.7 0.8 0.9 0.3 0.1-0.3 0.5-0.4 0.7-0.5 0.3-0.2 0.7-0.3 0.9-0.5 0.4-0.4-0.3-1.1-0.7-0.7z" />
+                        <path class="fill-white" d="m15.7 15c-0.3 0.5-0.5 0.9-0.7 1.4-0.2 0.6-0.5 1.1-0.7 1.7-0.1 0.6 0.8 0.9 0.9 0.3 0.1-0.5 0.4-1 0.6-1.5s0.3-0.9 0.7-1.4-0.4-1-0.8-0.5z" />
+                        <path class="fill-white" d="m10.6 23.6c-0.3-0.1-0.5 0.1-0.6 0.3-0.3 0.7-0.5 1.3-0.5 2 0 0.6 0.9 0.6 0.9 0 0-0.7 0.1-1.2 0.4-1.8 0.2-0.1 0-0.4-0.2-0.5z" />
+                        <path class="fill-white" d="m6.4 36.1v2.6c0 0.6 0.9 0.6 0.9 0v-2.6c0-0.6-0.9-0.6-0.9 0z" />
+                        <path class="fill-white" d="m7.1 45.8c-0.1-0.3 0-0.7 0-1 0-0.6-0.9-0.6-0.9 0 0 0.3-0.1 0.7 0 1 0.1 0.4 0.3 0.7 0.2 1-0.1 0.6 0.9 0.6 0.9 0 0.1-0.3-0.1-0.6-0.2-1z" />
+                        <path class="fill-white" d="m8.7 57.4c-0.4-0.7-0.6-1.6-1.1-2.2-0.4-0.5-1 0.2-0.7 0.7 0.5 0.6 0.7 1.4 1 2 0.2 0.5 1.1 0 0.8-0.5z" />
+                        <path class="fill-white" d="m13.3 63.9c-0.8-0.8-1.4-1.6-2.4-2.2-0.5-0.3-1 0.5-0.5 0.8 0.9 0.5 1.5 1.3 2.2 2 0.5 0.4 1.1-0.2 0.7-0.6z" />
+                        <path class="fill-white" d="m20.9 69.2c-0.5-0.1-1-0.4-1.5-0.7-0.5-0.2-0.9-0.5-1.2-0.9-0.4-0.4-1 0.3-0.7 0.7 0.4 0.4 0.9 0.8 1.4 1 0.6 0.3 1.1 0.7 1.8 0.7 0.5 0.2 0.7-0.7 0.2-0.8z" />
+                        <path class="fill-white" d="m31.1 72c-0.2 0-0.3-0.1-0.5-0.1-0.2-0.1-0.4 0-0.6-0.1-0.5-0.1-1-0.3-1.3-0.5-0.5-0.4-1.1 0.3-0.7 0.7 0.5 0.4 1 0.6 1.5 0.7 0.3 0.1 0.5 0 0.8 0.1s0.5 0.2 0.8 0.2c0.6-0.2 0.6-1.1 0-1z" />
+                        <path class="fill-white" d="m36.2 74.5c-0.1 0-0.3-0.2-0.3-0.3-0.1-0.1-0.3-0.3-0.4-0.5-0.4-0.4-1 0.2-0.7 0.7 0.4 0.4 0.7 0.9 1.4 1 0.3 0 0.5-0.2 0.5-0.5-0.1-0.2-0.3-0.4-0.5-0.4z" />
+                        <path class="fill-white" d="m46.7 80.6c-0.3 0-0.7-0.5-0.9-0.7-0.4-0.3-0.9-0.4-1.3-0.7-0.5-0.4-1.1 0.3-0.7 0.7 0.5 0.4 1.1 0.5 1.6 0.9 0.4 0.3 0.7 0.7 1.2 0.7 0.7 0.1 0.7-0.8 0.1-0.9z" />
+                        <path class="fill-white" d="m54.3 86.1c-0.4-0.4-0.7-0.8-1-1.2-0.3-0.5-1.2 0-0.8 0.5 0.3 0.4 0.5 0.8 0.9 1.1 0.2 0.2 0.7 0.5 0.7 0.7 0.1 0.6 1 0.6 0.9 0-0.1-0.5-0.3-0.8-0.7-1.1z" />
+                        <path class="fill-white" d="m60.3 93.1c0.1 0 0-0.1-0.1-0.1-0.1-0.1-0.1-0.1-0.1-0.2-0.1-0.2-0.3-0.3-0.5-0.5-0.3-0.3-0.7-0.7-0.7-1.2-0.1-0.6-1-0.3-0.9 0.3s0.5 1.1 0.9 1.5c0.2 0.2 0.4 0.4 0.5 0.7s0.3 0.4 0.6 0.5c0.6 0 0.9-0.8 0.3-1z" />
+                        <path class="fill-white" d="m64.9 100.9v-0.9c0-0.6-0.9-0.6-0.9 0 0 0.5-0.1 0.9 0.1 1.4 0.1 0.1 0.1 0.3 0.3 0.3h0.2c0.3 0.1 0.5-0.1 0.6-0.3 0-0.2-0.2-0.4-0.3-0.5z" />
+                        <path class="fill-white" d="m66.5 110.5c-0.5-0.4 0.1-1.7 0.1-2.2 0.1-0.6-0.9-0.6-0.9 0-0.1 0.9-0.7 2.2 0.1 2.9 0.5 0.3 1.1-0.3 0.7-0.7z" />
+                        <path class="fill-white" d="m64.2 116.7c-0.4 0.7-0.8 1.2-0.9 2-0.1 0.6 0.8 0.9 0.9 0.3 0.1-0.7 0.5-1.2 0.8-1.8 0.3-0.5-0.4-1-0.8-0.5z" />
+                        <path class="fill-white" d="m59.6 126.6c-0.1-0.3-0.4-0.3-0.7-0.2s-0.6 0.3-0.9 0.4-0.4 0.3-0.3 0.6 0.3 0.3 0.6 0.3c0.4-0.1 0.8-0.3 1.2-0.5 0.2 0 0.2-0.4 0.1-0.6z" />
+                        <path class="fill-white" d="m48.5 127.2c-0.8 0.1-1.6 0.2-2.3 0.2-0.6 0-0.6 0.9 0 0.9 0.8 0 1.6-0.1 2.3-0.2 0.6-0.1 0.6-1 0-0.9z" />
+                        <path class="fill-white" d="m40.9 126.6c-0.3-0.3-0.5-0.5-0.8-0.7-0.1-0.1-0.3-0.1-0.5-0.2s-0.3-0.1-0.4-0.1c-0.4-0.5-1 0.2-0.7 0.7 0.3 0.3 0.6 0.3 0.9 0.4s0.6 0.4 0.8 0.7c0.4 0.3 1.1-0.3 0.7-0.8z" />
+                        <path class="fill-white" d="m38.9 127.3c-0.3-0.5-0.7-0.9-1.1-1.4-0.4-0.4-1 0.2-0.7 0.7 0.4 0.4 0.7 0.7 1 1.2s1.1 0 0.8-0.5z" />
+                        <path class="fill-white" d="m33.7 119.8c-0.1-0.1-0.3-0.3-0.3-0.5 0-0.6-0.9-0.6-0.9 0 0 0.5 0.3 0.9 0.6 1.2 0.4 0.3 1.1-0.3 0.6-0.7z" />
+                        <path class="fill-white" d="m34.2 110c0 0.1-0.3 0.3-0.3 0.3-0.1 0.1-0.3 0.3-0.4 0.5-0.2 0.4-0.3 0.8-0.3 1.2-0.1 0.6 0.9 0.6 0.9 0 0.1-0.5 0.2-0.9 0.5-1.2s0.5-0.5 0.5-1c0.1-0.4-0.8-0.4-0.9 0.2z" />
+                        <path class="fill-white" d="m40.8 103.2c-0.5 0.1-0.9 0.5-1.3 0.7-0.5 0.3-0.8 0.7-1 1.2-0.3 0.5 0.5 1 0.8 0.5 0.2-0.4 0.5-0.7 0.8-0.9 0.4-0.3 0.8-0.6 1.2-0.7 0.1 0 0.3-0.2 0.3-0.3s0-0.1 0.1-0.2c0.1-0.5-0.7-0.8-0.9-0.3z" />
+                        <path class="fill-white" d="m49.4 100.3c-0.7-0.1-1.4 0.1-2 0.3-0.6 0.1-1 0.3-1.4 0.7-0.4 0.5 0.3 1.1 0.7 0.7s0.8-0.5 1.3-0.5c0.5-0.1 1-0.2 1.6-0.2 0.4-0.1 0.4-1-0.2-1z" />
+                        <path class="fill-white" d="m57 100.4c-0.8-0.6-1.7-0.7-2.6-0.8-0.6 0-0.6 0.9 0 0.9 0.7 0 1.4 0.1 2 0.5 0.4 0.4 1-0.3 0.6-0.6z" />
+                        <path class="fill-white" d="m66.5 103.9c-1.1-0.3-2.1-0.9-3.3-0.9-0.6 0.1-0.6 1 0 0.9 1.1-0.1 2 0.6 3 0.9 0.6 0 0.8-0.8 0.3-0.9z" />
+                        <path class="fill-white" d="m79.7 109.4c-0.6-0.7-1.1-1.4-1.8-2-0.8-0.6-1.6-0.9-2.5-1.3-0.5-0.3-1 0.5-0.5 0.8 0.8 0.4 1.6 0.7 2.3 1.1 0.7 0.5 1.2 1.3 1.8 2 0.5 0.5 1.1-0.1 0.7-0.6z" />
+                        <path class="fill-white" d="m87 114.4c-0.6-0.1-1.2-0.7-1.6-1.1s-1 0.2-0.7 0.7c0.6 0.6 1.3 1.3 2.2 1.4 0.7 0 0.7-1 0.1-1z" />
+                        <path class="fill-white" d="m97.7 120.6c-0.8-0.8-1.6-1.4-2.6-1.8-0.9-0.4-1.6-0.9-2.6-0.9-0.6 0-0.6 0.9 0 0.9 1.6 0 3.5 1.4 4.5 2.4 0.5 0.5 1.1-0.1 0.7-0.6z" />
+                        <path class="fill-white" d="m108.9 123.7c-0.5 0-1-0.3-1.5-0.4-0.4-0.1-1 0.1-1.4-0.1-0.5-0.4-1 0.3-0.7 0.7 0.5 0.5 1 0.4 1.6 0.4 0.7 0 1.2 0.5 1.9 0.4 0.7-0.2 0.8-1.1 0.1-1z" />
+                        <path class="fill-white" d="m118.2 126c-0.5 0-1 0.1-1.5 0s-0.9-0.3-1.3-0.4c-0.5-0.2-0.8 0.7-0.3 0.9 1 0.4 2 0.5 3.1 0.5 0.6-0.1 0.6-1 0-1z" />
+                        <path class="fill-white" d="m125.5 124c-0.5 0.5-1 0.8-1.7 0.9-0.6 0.1-0.3 1 0.3 0.9 0.8-0.2 1.5-0.6 2.1-1.2 0.4-0.4-0.3-1-0.7-0.6z" />
+                        <path class="fill-white" d="m128.7 117c-0.5 0.5-0.4 1.2-0.4 1.8-0.1 0.8-0.6 1.4-0.6 2.3 0 0.6 0.9 0.6 0.9 0 0-0.7 0.4-1.2 0.5-1.8 0.1-0.5-0.1-1.3 0.2-1.6 0.4-0.4-0.2-1.1-0.6-0.7z" />
+                        <path class="fill-white" d="m130.1 112c-0.3-0.5-0.1-1.2-0.3-1.8-0.1-0.3-0.1-0.7-0.3-0.9-0.1-0.3-0.3-0.6-0.4-1-0.1-0.6-1-0.3-0.9 0.3 0.1 0.3 0.3 0.6 0.4 0.9 0.1 0.4 0.3 0.8 0.3 1.2 0.2 0.7 0.1 1.2 0.4 1.8 0.2 0.6 1 0.1 0.8-0.5z" />
+                        <path class="fill-white" d="m127.7 104.9c-0.2-0.5-0.4-1.1-0.3-1.6 0.1-0.6-0.9-0.6-0.9 0-0.1 0.7 0.2 1.5 0.5 2.2 0.2 0.4 1-0.1 0.7-0.6z" />
+                        <path class="fill-white" d="m131 96.8c-0.3 0.3-0.7 0.3-0.9 0.5-0.4 0.2-0.7 0.5-1 0.9-0.4 0.4 0.3 1 0.7 0.7 0.3-0.3 0.6-0.6 0.9-0.8 0.3-0.1 0.7-0.3 1-0.5 0.4-0.5-0.3-1.2-0.7-0.8z" />
+                        <path class="fill-white" d="m136.4 96c-0.6 0-0.6 0.9 0 0.9 0.5 0 0.9-0.1 1.4-0.1 0.3 0 0.6 0 0.9 0.1 0.1 0 0.2 0.1 0.3 0.1h0.1c0.1 0.5 0.9 0.5 0.9-0.1-0.1-1.4-2.9-0.9-3.6-0.9z" />
+                        <path class="fill-white" d="m144.9 99.2c-0.5-0.3-1 0.5-0.5 0.8 0.7 0.5 2.5 1.1 2.3 2.2-0.1 0.6 0.8 0.9 0.9 0.3 0.3-1.7-1.6-2.5-2.7-3.3z" />
+                        <path class="fill-white" d="m156.6 106c-1.5-0.1-2.9-0.5-4.3-1-0.5-0.2-0.8 0.7-0.3 0.9 1.4 0.5 2.9 1 4.6 1 0.6 0 0.6-0.9 0-0.9z" />
+                        <path class="fill-white" d="m163 104.9c-0.4 0-0.7-0.1-1.1 0-0.3 0.1-0.7 0.3-1 0.2-0.6-0.1-0.6 0.9 0 0.9 0.3 0 0.7-0.1 1-0.2 0.4-0.1 0.8 0 1.1 0 0.6 0 0.6-0.9 0-0.9z" />
+                        <path class="fill-white" d="m168.1 103.9c0.5-0.1 0.5-0.9-0.1-0.9-0.5 0-0.9 0.4-1.2 0.7-0.1 0.2-0.3 0.4-0.3 0.7s0.3 0.5 0.5 0.6c0.3 0.1 0.5-0.1 0.6-0.3 0-0.1 0-0.3-0.1-0.4l0.2-0.2c0.1-0.1 0.1-0.1 0.2-0.1 0.1-0.1 0.1-0.1 0.2-0.1z" />
+						</svg>
+                    </div>
+
+
+                    <form class="row g-3 position-relative" id="pg-success" method="post" name="complaint" enctype="multipart/form-data" autocomplete="off">
+
+                        <h3 class="mb-3 text-black">Share your skills</h3>
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Course scheme <span class="text-danger">*</span></label>
+
+                            <select id="select_course" name="pkCourse_ID" class="form-control">
+                                <option value="select_course" selected="" disabled="">-- select --</option>
+                                <option value="CTS">Craftsmen Training Scheme (CTS)</option>
+                                <option value="ATS">Apprenticeship Training Scheme(ATS)</option>
+                                <option value="CITS">Crafts Instructor Training Scheme(CITS)</option>
+                            </select>
+
+                        </div>
+
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Trade <span class="text-danger">*</span></label>
+
+                            <select name="pkTrade_ID" id="select_trade" class="form-control">
+                                <option value="">-- select one -- </option>
+                            </select>
+
+                        </div>
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Content type <span class="text-danger">*</span></label>
+                            <select name="pkContent_ID" id="content_cat" onchange="select_cat(this)" class="form-control">
+                                <option value="">-- select --</option>
+                                <option value="ebook">E-Book</option>
+                                <option value="video">Video</option>
+                                <option value="qb">Question Bank</option>
+                            </select>
+
+                        </div>
+
+
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Content Language <span class="text-danger">*</span></label>
+
+                            <select name="language" class="form-control">
+                                <option value="select_course" selected="" disabled="">-- select --</option>
+                                <option value="Hindi">Hindi</option>
+                                <option value="English">English</option>
+                            </select>
+
+                        </div>
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Content description <span class="text-danger">*</span></label>
+                            <textarea class="form-control" name="pkDescription" style="padding-top: 5px; height: 60px; resize: none;" maxlength="100" placeholder="write your words... (max characters- 100)"></textarea>
+                        </div>
+
+
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Content keyword <span class="text-danger">*</span></label>
+
+                            <input type="text" class="form-control" name="keyword" placeholder="Content keyword" />
+                        </div>
+
+
+
+
+
+
+
+
+                        <script type="text/javascript">
+                            function select_cat(content_cat) {
+                                var selectedValue = content_cat.value;
+
+                                if (selectedValue == "video") {
+                                    document.getElementById('file_upload').style.display = "none";
+                                    document.getElementById('urlLink').style.display = "block";
+                                    document.getElementById('content_cat_para').innerHTML = "Insert Youtube video link  <span class='text-danger'>*</span>";
+                                    document.getElementById("urlLink").disabled = false;
+                                    document.getElementById("urlLink").placeholder = "Insert Youtube video link";
+                                    document.getElementById('file_upload').type = 'text';
+                                }
+
+                                else {
+                                    document.getElementById('file_upload').style.display = "block";
+                                    document.getElementById('urlLink').style.display = "none";
+                                    document.getElementById('content_cat_para').innerHTML = "Upload file  <span class='text-danger'>*</span>"
+                                    document.getElementById('file_upload').type = 'file';
+                                    document.getElementById('lbl_fileSize').innerHTML = 'File Size';
+                                    document.getElementById('input_fileSize').placeholder = 'File Size';
+                                }
+                            }
+                        </script>
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90" id="content_cat_para">Please select content type first <span class="text-danger">*</span></label>
+
+                            <input class="form-control hdn" name="ImageFile" type="file" id="file_upload" accept="application/pdf" onchange="file_size()" />
+                            <input type="text" class="form-control" id="urlLink" name="pkContent_locat" maxlength="55" placeholder="Please select content type first" disabled />
+                        </div>
+
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90">Publisher Name <span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" name="publisher" placeholder="Publisher Name" />
+                        </div>
+
+
+                        <div class="col-12 bg-dark-input">
+                            <label class="form-label text-black text-opacity-90"><span id="lbl_fileSize">File Size / Video Duration </span><span class="text-danger">*</span></label>
+                            <input type="text" class="form-control" id="input_fileSize" name="filesize" placeholder="File Size / Video Duration" />
+                        </div>
+
+
+
+
+                        <div class="col-12 bg-dark-input">
+                            <div class="d-grid">
+                                <!--                <button type="submit" name="submit" class="btn btn-md btn-primary" onclick="startConfetti();">UPLOAD</button>  -->
+                                <button type="submit" name="submit" class="btn btn-md btn-primary">UPLOAD</button>
+                            </div>
+                            <p class="mb-0 text-black text-opacity-90 small">Field required with <span class="text-danger fw-bold">*</span> are required to upload the content</p>
+                        </div>
+                    </form>
+
+
+
+
+                </div>
+            </div>
+        </div>
+
+
+        <div class="mb-2">
+
+
+            <!-- Title -->
+            <h1>You Share Skills.<br />The community improves for everyone.</h1>
+            <br />
+            <p class="mb-1"><b>Skill Forum</b> organizes information to find the most relevant, useful resources to the trainess.</p>
+
+
+            <p class="mb-4"> &nbsp;  &nbsp; First, Creators like you share their skills. When it’s online, your skills can benefit everyone.</p>
+
+
+
+
+            <!-- Sub tittle -->
+            <h4 class="mb-1">Content Guidelines</h4>
+            <!-- List -->
+            <ul class="list-group list-group-borderless mt-3 mb-sm-5">
+
+                <li class="list-group-item h6 fw-light d-flex">
+                    <i class="fas fa-times-circle fa-fw text-danger me-2"></i>No advertising. Don’t use the community to advertise yours or someone else’s website or youtube channel. These posts will be immediately removed and you might get banned.
+                </li>
+            </ul>
+
+
+        </div>
+
+
+
+
+    </div>
+
+
+    </div>
+</section>
+<!-- =======================
+Main part END -->
+</main>
+<!-- **************** MAIN CONTENT END **************** -->
+<script>
+    var CTS = ["Additive Manufacturing Technician (3D Printing)", "Aeronautical Structure and Equipment Fitter", "Agro Processing", "Architectural Draughtsman", "Attendant Operator (Chemical Plant)", "Baker & Confectioner", "Bamboo Works", "Basic Cosmetology", "Carpenter", "Catering & Hospitality Assistant", "Central Air Condition Plant Mechanic", "Civil Engineering Assistant", "Computer Aided Embroidery & Designing", "Computer Hardware & Network Maintenance", "Computer Operator and Programming Assistant (COPA)", "Computer Operator and Programming Assistant(VI & OD)", "Cutting & Sewing (FOR VISUALLY IMPAIERED)", "Dairying", "Database System Assistant", "Dental Laboratory Equipment Technician", "Desktop Publishing Operator", "Desktop Publishing Operator(VI)", "Digital Photographer", "Domestic Painter", "Draughtsman (Civil)", "Draughtsman Mechanical", "Dress Making (DM)", "Driver cum Mechanic", "Early Childhood Educator", "Electrician", "Electrician - Power Distribution", "Electronics Mechanic", "Electroplater", "Fashion Design and Technology (FD&T)", "Finance Executive", "Fire Technology and Industrial Safety Management", "Fireman", "Fitter", "Floriculture & Landscaping", "Food and Beverage Service Assistant", "Food Beverages", "Food Production (General)", "Footwear Maker", "Foundryman", "Front Office Assistant", "Fruits and Vegetables Processing", "GEO-Informatics Assistant", "Hair & Skin Care (VI)", "Health Sanitary Inspector", "Health, Safety and Environment", "Horticulture", "Hospital Housekeeping", "Housekeeper", "Human Resource Executive", "Industrial Painter", "Information & Communication Technology System Maintenance (ICTSM)", "Information Technology", "Instrument Mechanic", "Instrument Mechanic (Chemical Plant)", "Interior Design & Decoration", "IoT Technician (Smart Agriculture)", "IoT Technician (Smart City)", "IoT Technician (Smart Health Care)", "Laboratory Assistant (Chemical Plant)", "Leather Goods Maker", "Lift and Escalator Mechanic", "Machinist", "Machinist Grinder", "Maintenance Mechanic (Chemical Plant)", "Marine Engine Fitter", "Marine Fitter", "Marketing Executive", "Mason (Building Constructor)", "Mechanic Agricultural Machinery", "Mechanic Auto Body Painting", "Mechanic Auto Body Repair", "Mechanic Auto Electrical and Electronics", "Mechanic Consumer Electronic Appliances", "Mechanic Diesel", "Mechanic Lens/Prism Grinding", "Mechanic Machine Tool Maintenance", "Mechanic Mining Machinery", "Mechanic Motor Cycle", "Mechanic Motor Vehicle (MMV)", "Mechanic Refrigeration and Air Conditioner", "Mechanic Tractor", "Mechanic Two and Three Wheeler", "Metal Cutting Attendant (FOR VISUALLY IMPAIRED)", "Milk and Milk Product Technician", "Multimedia, Animation & Special Effects", "Old Age Care", "Operator Advance Machine Tool", "Painter (General)", "Photographer", "Physiotherapy Technician", "Plastic Processing Operator", "Plumber", "Pump Operator Cum Mechanic", "Radiology Technician", "Refactory Technician", "Remotely Piloted Aircraft (RPA)/Drone Pilot", "Rubber Technician", "Secretarial Practice (English)", "Sewing Technology", "Sheet Metal Worker", "Smartphone Technician Cum App Tester", "Software Testing Assistant", "Soil Testing and Crop Technician", "Solar Technician (Electrical)", "Spa Therapy", "Spinning Technician", "Stenographer Secretarial Assistant (English)", "Stenographer Secretarial Assistant (Hindi)", "Stone Mining Machine Operator", "Stone Processing Machine Operator", "Surface Ornamentation Techniques (Embroidery)", "Surveyor", "Technician Mechatronics", "Technician Medical Electronics", "Technician Power Electronics System", "Textile Mechatronics", "Textile Wet Processing Technician", "Tool & Die Maker ( Dies & Moulds)", "Tool & Die Maker ( Press Tools, Jigs & Fixtures)", "Tourist Guide", "Travel & Tour Assistant", "Turner", "Vessel Navigator", "Video Cameraman", "Weaving Technician", "Weaving Technician for Silk & Woolen Fabrics", "Welder", "Welder (Fabrication & Fitting)", "Welder (GMAW & GTAW)", "Welder (Pipe)", "Welder (Structural)", "Welder (Welding & Inspection)", "Wireman"];
+
+    var ATS = ["Advance Mechanic (Instruments)", "Advance Welder", "Advanced Attendant Operator (Process)", "Apprentice Food and Beverage Service (Stewardship)", "Apprentice Food Production (Cookery)", "Architectural Assistant", "Assistant Beautician", "Assistant Fashion Designer", "Assistant Front Office Manager", "Attendant Operator (Chemical Plant)", "Attendant Operator (Dairy)", "Baker and Confectioner", "Battery Repairer", "Beautician", "Beautician Assistant", "Blow Moulding Machine Operator", "Boiler Attendant", "Book Binder", "Brew Master", "Brick Layer (Refractory)", "Building Maintenance Technician", "Cabin/Room Attendant", "Cable Jointer", "Cable Television Operator", "CAD-CAM Operator cum Programmer", "Carpenter", "Ceramic Caster", "Ceramic Decorator", "Ceramic Kiln Operator", "Ceramic Moulder", "Ceramic Press Operator", "Chemical Laboratory Assistant", "CNC Programmer cum Operator", "Computer Aided Pattern Maker", "Computer and Peripherals Hardware Repair and Maintenance Mechanic", "Computer Networking Technician", "Computer Operator and Programming Assistant", "Computerized Embroidery Machine Operator and Digitizer", "Construction Machinery Mechanic-cum- Operator", "Crane Operator Overhead (Steel Industry)", "Creche Management Assistant", "Creel Boy-cum- Warper", "Customer Care Associate", "Cutting and Sewing Machine Operator", "Dental Laboratory Technician", "Designer and Master Cutter", "Desk Top Publishing Operator", "Digital Photographer", "Doffer-cum-Piecer", "Draughtsman (Mechanical)", "Draughtsman(Civil)", "Dress Maker", "Driver-cum-Mechanic (Light Motor Vehicle)", "Electrical Winder", "Electrician", "Electrician (Mines)", "Electrician (Steel Plant)", "Electrician Aircraft", "Electronics Mechanic", "Electronics Mechanic (Steel Plant)", "Electroplater", "Embroiderer (Surface Ornamentation Techniques)", "Enamel Glazer", "Engraver", "Extrusion Machine Operator (Plastic)", "Fashion Designing Assistant", "Fiber Reinforced Plastic Processor", "Finished Leather Maker", "Fitter", "Fitter (Steel Plant)", "Fitter structural", "Florist and Landscaper", "Food Production (General)", "Food Production (Vegetarian)", "Footwear Maker", "Forger and Heat Treater", "Foundryman", "Fruit and Vegetable Processor", "Furnace Operator (Steel Industry)", "Furniture and Cabinet Maker", "Gardener (Mali)", "Gas Cutter", "Glass Former and Processor", "Hair and Skin Carer", "Hair Cutter/Dresser", "Health and Slimming Assistant", "Heath Sanitary Inspector", "Horticulture Assistant", "Hospital Waste Management Assistant", "House Keeper (Corporate)", "House Keeper (Domestic)", "House Keeper (Hospital)", "House Keeper (Hotel)", "House Keeper (Institution)", "Information and Communication Technology System Maintenance", "Injection Moulding Machine Operator", "Instrument Controller", "Instrument Mechanic", "Instrument Mechanic (Chemical Plant)", "Instrument Mechanic (Steel Plant)", "Insulator Maker/Machine Operator (Ceramic)", "Insurance Agent", "Interior Designer and Decorator", "Jewel Smith", "Jigs and Fixtures Maker", "Knitter (Hosiery)", "Laboratory Assistant (Chemical Plant)", "Lacquering and Powder Coating Operator", "Leather Goods Maker", "Library Assistant", "Line Operator", "Lineman", "Machinist", "Machinist (Grinder)", "Maintenance Mechanic", "Maintenance Mechanic (Chemical Plant)", "Maintenance Mechanic for Leather Machinery", "Marine Engine Fitter", "Mason (Building Constructor)", "Mate (Mines)", "Material Handling Equipment Mechanic-cum- Operator", "Mechanic (Central Air conditioning Plant, Industrial cooling and Package", "Mechanic (Cold storage, Ice plant and Ice candy plant)", "Mechanic (Dairy Maintenance)", "Mechanic (Denting, Painting and Welding)", "Mechanic (Domestic, Commercial Refrigeration and Air Conditioning Machines)", "Mechanic (DTH and other Communication System)", "Mechanic (Electrical Domestic Appliances)", "Mechanic (Electrical Maintenance of Process Plant)", "Mechanic (Electrical Power Drives)", "Mechanic (Embedded Systems and PLC)", "Mechanic (HT, LT Equipments and Cable Jointing)", "Mechanic (Lift and Escalator)", "Mechanic (Non- conventional Power Generation, Battery and Inverter)", "Mechanic Advanced Machine Tool Maintenance.", "Mechanic Auto Electrical and Electronics", "Mechanic Auto Electronics", "Mechanic Automobile (Advanced Diesel Engine)", "Mechanic Automobile (Advanced Petrol Engine)", "Mechanic Automobile Electronics", "Mechanic Communication Equipment Maintenance", "Mechanic Consumer Electronics Appliances", "Mechanic Diesel", "Mechanic Earth Moving Machinery", "Mechanic Electrical Instruments", "Mechanic Electrical Maintenance (Industrial Automation)", "Mechanic Industrial Electronics", "Mechanic Instrument Aircraft", "Mechanic Machine Tool Maintenance", "Mechanic Maintenance (Textile Machinery)", "Mechanic Mechanical Maintenance (Industrial Automation)", "Mechanic Mechatronics", "Mechanic Medical Electronics", "Mechanic Medical Equipment for Hospitals and Occupational Health Centre.", "Mechanic Motor Cycle", "Mechanic Power Electronics (Inverters, UPS and Maintenance of Drives)", "Mechanic Radio and T.V.", "Mechanic Refrigeration and Air Conditioning", "Mechanic Repair and Maintenance of Electronics Test Equipment", "Mechanic Repair and Maintenance of Vehicle", "Mechanic Sewing Machine", "Mechanic Tractor", "Mechanic Watch and Clock", "Mechanic–cum-Operator Electronics Communication System", "Mechanic(Agriculture Machinery)", "Mechanic(Marine Diesel)", "Mechanic(Mining Machinery)", "Mechanic(Motor Vehicle)", "Mechanic Radio and Radar Aircraft", "Mechanic Television (Video)", "Medical Laboratory Technician (Cardiology)", "Medical Laboratory Technician (Pathology)", "Medical Laboratory Technician (Physiotherapy)", "Medical Laboratory Technician (Radiology)", "Mono Castor Operator", "Mono Keyboard Operator", "Motor Vehicle Body Builder", "Moulder (Refractory)", "Multimedia and Web Page Designer", "Offset Machine Minder", "Old Age Care Taker", "Operator (Steel Plant)", "Operator Advanced Machine Tool", "Operator Blast Furnace Iron Making Equipments", "Operator Coal Handling Equipment", "Operator Coke Ovens Battery Equipments", "Operator Cum Mechanic Pollution Control Equipment", "Operator Locomotive and Rail Cranes in Steel Plant", "Operator Material Handling at Raw Material Handling Plant", "Operator PLC System", "Operator Rolling Mills Equipment (Long Products)", "Operator Sinter Plant Equipments", "Operator Steel Melting Equipments", "Operator-cum-Mechanic Power Plant", "Optical Worker", "Painter (General)", "Painter (Marine)", "Pattern Maker", "Photographer", "Pipe Fitter", "Plastic Mould Maker", "Plastic Processing Operator", "Plate Maker (Lithographic)", "PLC Operator", "Plumber", "Power Electrician", "Pre or Preparatory School Management (Assistant)", "Printing Textile", "Process Cameraman", "Process Plant Operator", "Programming and Systems Administration Assistant", "Pruner Tea Gardens", "Pump Operator Cum Mechanic", "Quality Assurance Assistant", "Receptionist/Hotel Clerk/ Front Office Assistant", "Retoucher Lithographic", "Rigger", "Sales Person (Retail)", "Sanitary Hardware Fitter", "Screen Printing", "Secretarial Assistant", "Senior Sales Person (Retail)", "Sheet Metal Worker", "Shipwright (Steel)", "Shipwright (Wood)", "Shirts and Trousers Maker", "Shotfirer/Blaster (Mines)", "Sirdar (Colliery)", "Sports Goods Maker (Leather)", "Sports Goods Maker (Wood)", "Steam Turbine-cum-Auxiliary Plant Operator", "Steel Melting Hand", "Stenographer (English)", "Stenographer (Hindi)", "Steward", "Stockman (Dairy)", "Structural Welder", "Surveyor", "Switch Board Attendant", "Tailor (General)", "Tailor (Men)", "Tailor (Women)", "Technician Fabricator", "Technician Television and Audio System", "Technician(Automotive Manufacturing)", "Tenter (Drawing Speed/Fly Frames)", "TIG/MIG Welder", "Tool and Die Maker (Dies and Moulds)", "Tool and Die Maker (Press Tools, Jigs and Fixtures)", "Tourist Guide", "Turner", "Tyre Repairer", "Upholsterer", "Utility Operator", "Weaver", "Welder (Gas & Electric)", "Welder (Pipe and Pressure Vessels)", "Winder (Textile)", "Wireman", "Wood Handicrafts Worker"];
+
+    var CITS = ["Architectural Assistantship", "Bamboo Works", "Carpenter", "Computer Hardware & Networking Maintenance", "Computer Software Application", "Cosmetology", "Desktop Publishing Operator", "Draughtsman (Civil)", "Draughtsman (Mechanical)", "Dress Making", "Electrician & Wireman", "Electronics Mechanic", "Fashion Design Technology", "Fitter", "Food Beverage", "Foundryman", "Fruit and Vegetable Processor", "Instrument Mechanic", "Machinist (Grinder)", "Machinist & Operator Advance Machine Tool", "Mechanic Agricultural Machinery", "Mechanic Diesel", "Mechanic Machine Tool Maintenance", "Mechanic Motor Vehicle", "Mechanic Refrigeration & Air Conditioning", "Mechanic Tractor", "Milk & Milk Products", "Office Management", "Plumber", "Reading of Drawing & Arithmetic", "Sewing Technology", "Sheet Metal Worker", "Surface Ornamentation Techniques", "Tool & Die Maker", "Turner", "Welder (Gas & Electric)"];
+
+
+    $("#select_course").change(function () {
+
+        var selected_course = $(this).val();
+        var optionsList;
+        // alert(selected_course);
+        var htmlString = "";
+
+        switch (selected_course) {
+            case "CTS":
+                optionsList = CTS;
+                break;
+            case "ATS":
+                optionsList = ATS;
+                break;
+            case "CITS":
+                optionsList = CITS;
+                break;
+        }
+
+
+        for (var i = 0; i < optionsList.length; i++) {
+            htmlString = htmlString + "<option value='" + optionsList[i] + "'>" + optionsList[i] + "</option>";
+        }
+        // alert(htmlString);
+        $("#select_trade").html(htmlString);
+
+    });
+</script>
+
+
+
+
+<script>
+    var count = 3;
+    var counter;
+
+    function start() { counter = setInterval(timer, 1000); }
+    function timer() {
+        count--;
+
+        if (count < 0) {
+            clearInterval(counter);
+            stopConfetti();
+            return;
+        }
+    }
+
+</script>
+
+
+
+
+
+
+    </div>
+
+</div>
+
+
+<style>
+    #confetti-canvas {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 9;
+    }
+</style>
+
+
+
+<script>
+    var maxParticleCount = 150; //set max confetti count
+    var particleSpeed = 2; //set the particle animation speed
+    var startConfetti; //call to start confetti animation
+    var stopConfetti; //call to stop adding confetti
+    var toggleConfetti; //call to start or stop the confetti animation depending on whether it's already running
+    var removeConfetti; //call to stop the confetti animation and remove all confetti immediately
+
+    (function () {
+        startConfetti = startConfettiInner;
+        stopConfetti = stopConfettiInner;
+        toggleConfetti = toggleConfettiInner;
+        removeConfetti = removeConfettiInner;
+        var colors = ["DodgerBlue", "OliveDrab", "Gold", "Pink", "SlateBlue", "LightBlue", "Violet", "PaleGreen", "SteelBlue", "SandyBrown", "Chocolate", "Crimson"]
+        var streamingConfetti = false;
+        var animationTimer = null;
+        var particles = [];
+        var waveAngle = 0;
+
+        function resetParticle(particle, width, height) {
+            particle.color = colors[(Math.random() * colors.length) | 0];
+            particle.x = Math.random() * width;
+            particle.y = Math.random() * height - height;
+            particle.diameter = Math.random() * 10 + 5;
+            particle.tilt = Math.random() * 10 - 10;
+            particle.tiltAngleIncrement = Math.random() * 0.07 + 0.05;
+            particle.tiltAngle = 0;
+            return particle;
+        }
+
+        function startConfettiInner() {
+            start();
+
+            document.getElementById("pg-success").innerHTML = "<div style='text-align: center;'><i class='fas fa-check-circle' style='font-size: 55px; color: #34b233;'></i> </h1> <br/>  <br/>  Your file has been uploaded successfully! <br />  <br />  <a href='https://localhost:44302/Home/Home1' class='btn btn-md btn-primary'>GO TO HOME > </a></div>";
+
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            window.requestAnimFrame = (function () {
+                return window.requestAnimationFrame ||
+                    window.webkitRequestAnimationFrame ||
+                    window.mozRequestAnimationFrame ||
+                    window.oRequestAnimationFrame ||
+                    window.msRequestAnimationFrame ||
+                    function (callback) {
+                        return window.setTimeout(callback, 16.6666667);
+                    };
+            })();
+            var canvas = document.getElementById("confetti-canvas");
+            if (canvas === null) {
+                canvas = document.createElement("canvas");
+                canvas.setAttribute("id", "confetti-canvas");
+                canvas.setAttribute("style", "display:block;z-index:999999;pointer-events:none");
+                document.body.appendChild(canvas);
+                canvas.width = width;
+                canvas.height = height;
+                window.addEventListener("resize", function () {
+                    canvas.width = window.innerWidth;
+                    canvas.height = window.innerHeight;
+                }, true);
+            }
+            var context = canvas.getContext("2d");
+            while (particles.length < maxParticleCount)
+                particles.push(resetParticle({}, width, height));
+            streamingConfetti = true;
+            if (animationTimer === null) {
+                (function runAnimation() {
+                    context.clearRect(0, 0, window.innerWidth, window.innerHeight);
+                    if (particles.length === 0)
+                        animationTimer = null;
+                    else {
+                        updateParticles();
+                        drawParticles(context);
+                        animationTimer = requestAnimFrame(runAnimation);
+                    }
+                })();
+            }
+        }
+
+        function stopConfettiInner() {
+            streamingConfetti = false;
+        }
+
+        function removeConfettiInner() {
+            stopConfetti();
+            particles = [];
+        }
+
+        function toggleConfettiInner() {
+            if (streamingConfetti)
+                stopConfettiInner();
+            else
+                startConfettiInner();
+        }
+
+        function drawParticles(context) {
+            var particle;
+            var x;
+            for (var i = 0; i < particles.length; i++) {
+                particle = particles[i];
+                context.beginPath();
+                context.lineWidth = particle.diameter;
+                context.strokeStyle = particle.color;
+                x = particle.x + particle.tilt;
+                context.moveTo(x + particle.diameter / 2, particle.y);
+                context.lineTo(x, particle.y + particle.tilt + particle.diameter / 2);
+                context.stroke();
+            }
+        }
+
+        function updateParticles() {
+            var width = window.innerWidth;
+            var height = window.innerHeight;
+            var particle;
+            waveAngle += 0.01;
+            for (var i = 0; i < particles.length; i++) {
+                particle = particles[i];
+                if (!streamingConfetti && particle.y < -15)
+                    particle.y = height + 100;
+                else {
+                    particle.tiltAngle += particle.tiltAngleIncrement;
+                    particle.x += Math.sin(waveAngle);
+                    particle.y += (Math.cos(waveAngle) + particle.diameter + particleSpeed) * 0.5;
+                    particle.tilt = Math.sin(particle.tiltAngle) * 15;
+                }
+                if (particle.x > width + 20 || particle.x < -20 || particle.y > height) {
+                    if (streamingConfetti && particles.length <= maxParticleCount)
+                        resetParticle(particle, width, height);
+                    else {
+                        particles.splice(i, 1);
+                        i--;
+                    }
+                }
+            }
+        }
+    })();
+
+
+    function file_size() {
+
+        var filesize = document.getElementById("file_upload").files[0].size;
+        var store_file_size = (filesize / 1024 ** 2).toFixed(2) + " MB";
+        if (filesize > 10485760) {
+            alert("File size is too large!");
+            document.getElementById("file_upload").value = "";
+        }
+        else { document.getElementById("input_fileSize").value = store_file_size; }
+
+    }
+
+
+</script>
+
+
+
+

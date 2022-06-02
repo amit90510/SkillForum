@@ -1,0 +1,283 @@
+﻿<!--  <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - My ASP.NET Application</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+</head>
+<body>
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                @Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
+                    <li>@Html.ActionLink("About", "About", "Home")</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <div class="container body-content">
+
+
+@Styles.Render("~/Content/assets/css/style.css")
+@Scripts.Render("~/bundles/modernizr")
+-->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Bharat Skill Forum</title>
+    <meta charset="UTF-8">
+    <!-- Meta Tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content=" Bharat Skill Forum">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="assets/images/favicon.ico">
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+
+    <!-- Plugins CSS -->
+    <link rel="stylesheet" type="text/css" href="assets/vendor/font-awesome/css/all.min.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/tiny-slider/tiny-slider.css">
+    <link rel="stylesheet" type="text/css" href="assets/vendor/glightbox/css/glightbox.css">
+
+    <!-- Theme CSS -->
+    <link id="style-switch" rel="stylesheet" type="text/css" href="assets/css/style.css">
+
+
+    <!-- dotnet layout binding -->
+
+
+
+    @Styles.Render("~/Content/assets/css/style.css")
+
+    <!-- Google Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;700&family=Roboto:wght@400;500;700&display=swap">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Plugins CSS -->
+    @Styles.Render("~/Content/assets/vendor/font-awesome/css/all.min.css")
+    @Styles.Render("~/Content/assets/vendor/bootstrap-icons/bootstrap-icons.css")
+    @Styles.Render("~/Content/assets/vendor/tiny-slider/tiny-slider.css")
+    @Styles.Render("~/Content/assets/vendor/glightbox/css/glightbox.css")
+
+    <!-- Theme CSS -->
+    @Styles.Render("~/Content/assets/css/style.css")
+
+
+</head>
+
+<body>
+
+    <!-- Header START -->
+    <header class="navbar-light navbar-sticky header-static" style="border-bottom: 1px solid #aeaeae;">
+        <!-- Logo Nav START -->
+        <nav class="navbar navbar-expand-xl">
+            <div class="container-fluid px-3 px-xl-5">
+                <!-- Logo START -->
+                <a class="navbar-brand" href="https://localhost:44302/Home/Home1">
+                    <img class="light-mode-item navbar-brand-item" src="~/Content/assets/images/logo.svg" alt="logo">
+                    <img class="dark-mode-item navbar-brand-item" src="~/Content/assets/images/logo.svg" alt="logo">
+                </a>
+                <!-- Logo END -->
+                <!-- Responsive navbar toggler -->
+                <button class="navbar-toggler ms-auto" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-animation">
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </span>
+                </button>
+
+                <!-- Main navbar START -->
+                <div class="navbar-collapse w-100 collapse" id="navbarCollapse">
+
+                    <!-- Nav category menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+
+                        <ul class="dropdown-menu" aria-labelledby="categoryMenu">
+                        </ul>
+                        </li>
+                    </ul>
+                    <!-- Nav category menu END -->
+                    <!-- Nav Main menu START -->
+                    <ul class="navbar-nav navbar-nav-scroll me-auto">
+                        <!-- Nav item 1 Demos -->
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">About</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Contact</a>
+                        </li>
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle active" href="#" id="demoMenu" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false">FAQs</a>
+                        </li>
+
+
+                    </ul>
+                    <!-- Nav Main menu END -->
+                    <!-- Nav Search START -->
+                    <div class="nav my-3 my-xl-0 px-4 flex-nowrap align-items-center">
+                        <!--           <div class="nav-item w-100">
+                                           <form class="position-relative">
+                                               <input class="form-control pe-5 bg-transparent" type="search" placeholder="Search" aria-label="Search">
+                                               <button class="btn bg-transparent px-2 py-0 position-absolute top-50 end-0 translate-middle-y" type="submit"><i class="fas fa-search fs-6 "></i></button>
+                                           </form>
+                                       </div>    -->
+
+
+                        <div class="nav-item w-100">
+                            <div class="position-relative">
+                                <a href="login" class="form-control bg-primary" style="color:#fff;">Share your skills</a>
+
+                            </div>
+                        </div>
+
+
+
+
+
+                    </div>
+                    <!-- Nav Search END -->
+                </div>
+                <!-- Main navbar END -->
+                <!-- Profile START -->
+                <div class="dropdown ms-1 ms-lg-0">
+                    <a class="avatar avatar-sm p-0" href="#" id="profileDropdown" role="button" data-bs-auto-close="outside" data-bs-display="static" data-bs-toggle="dropdown" aria-expanded="false">
+                        <img class="avatar-img rounded-circle" src="~/Content/assets/images/avatar/01.png" alt="avatar">
+                    </a>
+                    <ul class="dropdown-menu dropdown-animation dropdown-menu-end shadow pt-3" aria-labelledby="profileDropdown">
+                        <!-- Profile info -->
+                        <li class="px-3">
+                            <div class="d-flex align-items-center">
+                                <!-- Avatar -->
+                                <div class="avatar me-3">
+                                    <img class="avatar-img rounded-circle shadow" src="~/Content/assets/images/avatar/01.png" alt="avatar">
+                                </div>
+                                <div>
+                                    <a class="h6" href="#">DGT IT CELL</a>
+                                    <p class="small m-0">webmaster@dgt.gov.in</p>
+                                </div>
+                            </div>
+                            <hr>
+                        </li>
+                        <!-- Links -->
+                        <li><a class="dropdown-item" href="#"><i class="bi bi-person fa-fw me-2"></i>Edit Profile</a></li>
+                        <li><span class="dropdown-item bg-danger-soft-hover" onclick="op_signout()"><i class="bi bi-power fa-fw me-2"></i>Sign Out</span></li>
+
+                        <script>
+
+                            function op_signout() {
+                                if (confirm("do you want to sign out ?")) {
+                                    location.replace("login");
+                                }
+                            }
+
+                        </script>
+
+
+                    </ul>
+                </div>
+                <!-- Profile START -->
+            </div>
+        </nav>
+        <!-- Logo Nav END -->
+    </header>
+    <!-- Header END -->
+    <!-- **************** MAIN CONTENT START **************** -->
+    <main>
+
+
+
+
+
+
+
+
+        @RenderBody()
+
+        <!--
+                <hr />
+                <footer>
+                    <p>&copy; @DateTime.Now.Year - This is header</p>
+                </footer>
+            </div>
+
+            @Scripts.Render("~/bundles/jquery")
+            @Scripts.Render("~/bundles/bootstrap")
+            @RenderSection("scripts", required: false)
+        </body>
+        </html>
+                -->
+
+
+
+
+
+    </main>
+    <!-- **************** MAIN CONTENT END **************** -->
+    <!-- =======================
+    Footer START -->
+    <footer class="pt-0">
+        <div class="container">
+
+            <!-- Divider -->
+            <hr class="mt-4 mb-0">
+
+            <!-- Bottom footer -->
+            <div class="py-3">
+                <div class="container px-0">
+                    <div class="d-md-flex justify-content-between align-items-center py-3 text-center text-md-left">
+                        <!-- copyright text -->
+                        <div class="text-primary-hover"> <a href="#" class="text-body">Bharat Skill Forum</a></div>
+                        <!-- copyright links-->
+                        <div class=" mt-3 mt-md-0">
+                            <ul class="list-inline mb-0">
+
+                                <li class="list-inline-item"><a class="nav-link" href="#">Terms of use</a></li>
+                                <li class="list-inline-item"><a class="nav-link pe-0" href="#">Privacy Policy</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+    <!-- =======================
+    Footer END -->
+    <!-- Back to top -->
+    <div class="back-top"><i class="bi bi-arrow-up-short position-absolute top-50 start-50 translate-middle"></i></div>
+
+    <!-- Bootstrap JS -->
+    <script src="~/Content/assets/vendor/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Vendors -->
+    <script src="~/Content/assets/vendor/tiny-slider/tiny-slider.js"></script>
+    <script src="~/Content/assets/vendor/glightbox/js/glightbox.js"></script>
+    <script src="~/Content/assets/vendor/purecounterjs/dist/purecounter_vanilla.js"></script>
+    <script src="~/Content/assets/js/functions.js"></script>
+    <script src="~/Content/assets/jquery.min.js"></script>
+
+</body>
+</html>

@@ -1,0 +1,211 @@
+﻿@model skillforum.Models.ebook
+@{
+    ViewBag.Title = "ebook";
+}
+
+
+<!-- =======================
+Page Banner END -->
+<!-- Tabs START -->
+<ul class="nav nav-pills nav-pills-bg-soft justify-content-sm-center mb-4 px-3" id="course-pills-tab" role="tablist">
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="javascript:void(0)" class="nav-link mb-2 mb-md-0 active" id="course-pills-tab-1">E-BOOK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="questionbank" class="nav-link mb-2 mb-md-0" id="course-pills-tab-2">QUESTION BANK</a>
+    </li>
+    <!-- Tab item -->
+    <li class="nav-item me-2 me-sm-5">
+        <a href="video" class="nav-link mb-2 mb-md-0" id="course-pills-tab-3">VIDEOS</a>
+    </li>
+
+
+</ul>
+<!-- Tabs END -->
+<!-- =======================
+Page content START -->
+<section class="pt-0">
+    <div class="container">
+
+        <!-- Filter bar START -->
+        <form class="bg-light border p-4 rounded-3 my-4 z-index-9 position-relative">
+            <div class="row g-3">
+                <!-- Input -->
+                <div class="col-xl-3">
+                    <input class="form-control me-1" id="keyword_input" type="search" placeholder="Enter keyword" onkeyup="fn_search_keyword()" />
+                </div>
+
+                <!-- Select item -->
+                <div class="col-xl-8">
+                    <div class="row g-3">
+                        <!-- Select items -->
+                        <div class="col-xl-4">
+
+
+                            <select id="select_course" name="pkCourse_ID" class="form-control" aria-label=".form-select-sm example">
+                                <option value="select_course" selected="" disabled="">Course Scheme</option>
+                                <option value="CTS">CTS</option>
+                                <option value="ATS">ATS</option>
+                                <option value="CITS">CITS</option>
+                            </select>
+
+
+
+
+                        </div>
+
+                        <!-- Search item -->
+                        <div class="col-xl-5">
+
+                            <select name="pkTrade_ID" id="select_trade" class="form-control" aria-label=".form-select-sm example" onchange="fn_search_trade()">
+                                <option value=""> Trade </option>
+                            </select>
+
+
+                        </div>
+
+
+                        <!-- Search item -->
+                        <div class="col-xl-3">
+                            <select class="form-control" aria-label=".form-select-sm example">
+                                <option value="">Language</option>
+                                <option>English</option>
+                                <option>Hindi</option>
+                            </select>
+                        </div>
+                    </div> <!-- Row END -->
+                </div>
+                <!-- Button -->
+                <div class="col-xl-1">
+                    <button type="button" class="btn btn-primary mb-0 rounded z-index-1 w-100"><i class="fas fa-search"></i></button>
+                </div>
+            </div> <!-- Row END -->
+        </form>
+        <!-- Filter bar END -->
+
+        <div class="row mt-3">
+            <!-- Main content START -->
+            <div class="col-12">
+
+                <!-- Course Grid START -->
+                <div class="row g-4">
+
+                   
+    @if (Model != null)
+    {
+        if (Model.usersinfo.Count > 0)
+        {
+
+
+
+
+            <div id="row_allstate" class="row" style="width: 10%; margin-left: 1px;">
+                <table class="table">
+
+                    @foreach (var item in Model.usersinfo)
+                    {
+
+
+                        if (item.pkContent_ID.ToLower() == "ebook")
+                        {
+                            var dataurl = Server.MapPath(item.pkContent_locat);
+                    <tr class="content_desc">
+
+                        <td>
+
+                            <embed src="@item.pkContent_locat" width="400" height="250"></embed>
+
+
+                        </td>
+                        <td>
+
+                            <p>@Html.DisplayFor(modelitem => item.pkDescription)</p>
+                            <p>@Html.DisplayFor(modelitem => item.publisher)</p>
+                            <p>@Html.DisplayFor(modelitem => item.language)</p>
+                            <p>@Html.DisplayFor(modelitem => item.filesize)</p>
+
+
+
+                        </td>
+                        
+
+
+
+                    </tr>
+                        }
+
+                    }
+                </table>
+            </div>
+
+
+
+        }
+        else
+        {
+            <b>No Details Found.</b>
+        }
+    }
+
+
+
+
+
+
+
+                        </div>
+                            </div>
+                            <!-- Card item END -->
+
+
+                        </div>
+        <!-- Course Grid END -->
+
+    </div>
+    <!-- Main content END -->
+
+
+    <script>
+        var CTS = ["Additive Manufacturing Technician (3D Printing)", "Aeronautical Structure and Equipment Fitter", "Agro Processing", "Architectural Draughtsman", "Attendant Operator (Chemical Plant)", "Baker & Confectioner", "Bamboo Works", "Basic Cosmetology", "Carpenter", "Catering & Hospitality Assistant", "Central Air Condition Plant Mechanic", "Civil Engineering Assistant", "Computer Aided Embroidery & Designing", "Computer Hardware & Network Maintenance", "Computer Operator and Programming Assistant (COPA)", "Computer Operator and Programming Assistant(VI & OD)", "Cutting & Sewing (FOR VISUALLY IMPAIERED)", "Dairying", "Database System Assistant", "Dental Laboratory Equipment Technician", "Desktop Publishing Operator", "Desktop Publishing Operator(VI)", "Digital Photographer", "Domestic Painter", "Draughtsman (Civil)", "Draughtsman Mechanical", "Dress Making (DM)", "Driver cum Mechanic", "Early Childhood Educator", "Electrician", "Electrician - Power Distribution", "Electronics Mechanic", "Electroplater", "Fashion Design and Technology (FD&T)", "Finance Executive", "Fire Technology and Industrial Safety Management", "Fireman", "Fitter", "Floriculture & Landscaping", "Food and Beverage Service Assistant", "Food Beverages", "Food Production (General)", "Footwear Maker", "Foundryman", "Front Office Assistant", "Fruits and Vegetables Processing", "GEO-Informatics Assistant", "Hair & Skin Care (VI)", "Health Sanitary Inspector", "Health, Safety and Environment", "Horticulture", "Hospital Housekeeping", "Housekeeper", "Human Resource Executive", "Industrial Painter", "Information & Communication Technology System Maintenance (ICTSM)", "Information Technology", "Instrument Mechanic", "Instrument Mechanic (Chemical Plant)", "Interior Design & Decoration", "IoT Technician (Smart Agriculture)", "IoT Technician (Smart City)", "IoT Technician (Smart Health Care)", "Laboratory Assistant (Chemical Plant)", "Leather Goods Maker", "Lift and Escalator Mechanic", "Machinist", "Machinist Grinder", "Maintenance Mechanic (Chemical Plant)", "Marine Engine Fitter", "Marine Fitter", "Marketing Executive", "Mason (Building Constructor)", "Mechanic Agricultural Machinery", "Mechanic Auto Body Painting", "Mechanic Auto Body Repair", "Mechanic Auto Electrical and Electronics", "Mechanic Consumer Electronic Appliances", "Mechanic Diesel", "Mechanic Lens/Prism Grinding", "Mechanic Machine Tool Maintenance", "Mechanic Mining Machinery", "Mechanic Motor Cycle", "Mechanic Motor Vehicle (MMV)", "Mechanic Refrigeration and Air Conditioner", "Mechanic Tractor", "Mechanic Two and Three Wheeler", "Metal Cutting Attendant (FOR VISUALLY IMPAIRED)", "Milk and Milk Product Technician", "Multimedia, Animation & Special Effects", "Old Age Care", "Operator Advance Machine Tool", "Painter (General)", "Photographer", "Physiotherapy Technician", "Plastic Processing Operator", "Plumber", "Pump Operator Cum Mechanic", "Radiology Technician", "Refactory Technician", "Remotely Piloted Aircraft (RPA)/Drone Pilot", "Rubber Technician", "Secretarial Practice (English)", "Sewing Technology", "Sheet Metal Worker", "Smartphone Technician Cum App Tester", "Software Testing Assistant", "Soil Testing and Crop Technician", "Solar Technician (Electrical)", "Spa Therapy", "Spinning Technician", "Stenographer Secretarial Assistant (English)", "Stenographer Secretarial Assistant (Hindi)", "Stone Mining Machine Operator", "Stone Processing Machine Operator", "Surface Ornamentation Techniques (Embroidery)", "Surveyor", "Technician Mechatronics", "Technician Medical Electronics", "Technician Power Electronics System", "Textile Mechatronics", "Textile Wet Processing Technician", "Tool & Die Maker ( Dies & Moulds)", "Tool & Die Maker ( Press Tools, Jigs & Fixtures)", "Tourist Guide", "Travel & Tour Assistant", "Turner", "Vessel Navigator", "Video Cameraman", "Weaving Technician", "Weaving Technician for Silk & Woolen Fabrics", "Welder", "Welder (Fabrication & Fitting)", "Welder (GMAW & GTAW)", "Welder (Pipe)", "Welder (Structural)", "Welder (Welding & Inspection)", "Wireman"];
+
+        var ATS = ["Advance Mechanic (Instruments)", "Advance Welder", "Advanced Attendant Operator (Process)", "Apprentice Food and Beverage Service (Stewardship)", "Apprentice Food Production (Cookery)", "Architectural Assistant", "Assistant Beautician", "Assistant Fashion Designer", "Assistant Front Office Manager", "Attendant Operator (Chemical Plant)", "Attendant Operator (Dairy)", "Baker and Confectioner", "Battery Repairer", "Beautician", "Beautician Assistant", "Blow Moulding Machine Operator", "Boiler Attendant", "Book Binder", "Brew Master", "Brick Layer (Refractory)", "Building Maintenance Technician", "Cabin/Room Attendant", "Cable Jointer", "Cable Television Operator", "CAD-CAM Operator cum Programmer", "Carpenter", "Ceramic Caster", "Ceramic Decorator", "Ceramic Kiln Operator", "Ceramic Moulder", "Ceramic Press Operator", "Chemical Laboratory Assistant", "CNC Programmer cum Operator", "Computer Aided Pattern Maker", "Computer and Peripherals Hardware Repair and Maintenance Mechanic", "Computer Networking Technician", "Computer Operator and Programming Assistant", "Computerized Embroidery Machine Operator and Digitizer", "Construction Machinery Mechanic-cum- Operator", "Crane Operator Overhead (Steel Industry)", "Creche Management Assistant", "Creel Boy-cum- Warper", "Customer Care Associate", "Cutting and Sewing Machine Operator", "Dental Laboratory Technician", "Designer and Master Cutter", "Desk Top Publishing Operator", "Digital Photographer", "Doffer-cum-Piecer", "Draughtsman (Mechanical)", "Draughtsman(Civil)", "Dress Maker", "Driver-cum-Mechanic (Light Motor Vehicle)", "Electrical Winder", "Electrician", "Electrician (Mines)", "Electrician (Steel Plant)", "Electrician Aircraft", "Electronics Mechanic", "Electronics Mechanic (Steel Plant)", "Electroplater", "Embroiderer (Surface Ornamentation Techniques)", "Enamel Glazer", "Engraver", "Extrusion Machine Operator (Plastic)", "Fashion Designing Assistant", "Fiber Reinforced Plastic Processor", "Finished Leather Maker", "Fitter", "Fitter (Steel Plant)", "Fitter structural", "Florist and Landscaper", "Food Production (General)", "Food Production (Vegetarian)", "Footwear Maker", "Forger and Heat Treater", "Foundryman", "Fruit and Vegetable Processor", "Furnace Operator (Steel Industry)", "Furniture and Cabinet Maker", "Gardener (Mali)", "Gas Cutter", "Glass Former and Processor", "Hair and Skin Carer", "Hair Cutter/Dresser", "Health and Slimming Assistant", "Heath Sanitary Inspector", "Horticulture Assistant", "Hospital Waste Management Assistant", "House Keeper (Corporate)", "House Keeper (Domestic)", "House Keeper (Hospital)", "House Keeper (Hotel)", "House Keeper (Institution)", "Information and Communication Technology System Maintenance", "Injection Moulding Machine Operator", "Instrument Controller", "Instrument Mechanic", "Instrument Mechanic (Chemical Plant)", "Instrument Mechanic (Steel Plant)", "Insulator Maker/Machine Operator (Ceramic)", "Insurance Agent", "Interior Designer and Decorator", "Jewel Smith", "Jigs and Fixtures Maker", "Knitter (Hosiery)", "Laboratory Assistant (Chemical Plant)", "Lacquering and Powder Coating Operator", "Leather Goods Maker", "Library Assistant", "Line Operator", "Lineman", "Machinist", "Machinist (Grinder)", "Maintenance Mechanic", "Maintenance Mechanic (Chemical Plant)", "Maintenance Mechanic for Leather Machinery", "Marine Engine Fitter", "Mason (Building Constructor)", "Mate (Mines)", "Material Handling Equipment Mechanic-cum- Operator", "Mechanic (Central Air conditioning Plant, Industrial cooling and Package", "Mechanic (Cold storage, Ice plant and Ice candy plant)", "Mechanic (Dairy Maintenance)", "Mechanic (Denting, Painting and Welding)", "Mechanic (Domestic, Commercial Refrigeration and Air Conditioning Machines)", "Mechanic (DTH and other Communication System)", "Mechanic (Electrical Domestic Appliances)", "Mechanic (Electrical Maintenance of Process Plant)", "Mechanic (Electrical Power Drives)", "Mechanic (Embedded Systems and PLC)", "Mechanic (HT, LT Equipments and Cable Jointing)", "Mechanic (Lift and Escalator)", "Mechanic (Non- conventional Power Generation, Battery and Inverter)", "Mechanic Advanced Machine Tool Maintenance.", "Mechanic Auto Electrical and Electronics", "Mechanic Auto Electronics", "Mechanic Automobile (Advanced Diesel Engine)", "Mechanic Automobile (Advanced Petrol Engine)", "Mechanic Automobile Electronics", "Mechanic Communication Equipment Maintenance", "Mechanic Consumer Electronics Appliances", "Mechanic Diesel", "Mechanic Earth Moving Machinery", "Mechanic Electrical Instruments", "Mechanic Electrical Maintenance (Industrial Automation)", "Mechanic Industrial Electronics", "Mechanic Instrument Aircraft", "Mechanic Machine Tool Maintenance", "Mechanic Maintenance (Textile Machinery)", "Mechanic Mechanical Maintenance (Industrial Automation)", "Mechanic Mechatronics", "Mechanic Medical Electronics", "Mechanic Medical Equipment for Hospitals and Occupational Health Centre.", "Mechanic Motor Cycle", "Mechanic Power Electronics (Inverters, UPS and Maintenance of Drives)", "Mechanic Radio and T.V.", "Mechanic Refrigeration and Air Conditioning", "Mechanic Repair and Maintenance of Electronics Test Equipment", "Mechanic Repair and Maintenance of Vehicle", "Mechanic Sewing Machine", "Mechanic Tractor", "Mechanic Watch and Clock", "Mechanic–cum-Operator Electronics Communication System", "Mechanic(Agriculture Machinery)", "Mechanic(Marine Diesel)", "Mechanic(Mining Machinery)", "Mechanic(Motor Vehicle)", "Mechanic Radio and Radar Aircraft", "Mechanic Television (Video)", "Medical Laboratory Technician (Cardiology)", "Medical Laboratory Technician (Pathology)", "Medical Laboratory Technician (Physiotherapy)", "Medical Laboratory Technician (Radiology)", "Mono Castor Operator", "Mono Keyboard Operator", "Motor Vehicle Body Builder", "Moulder (Refractory)", "Multimedia and Web Page Designer", "Offset Machine Minder", "Old Age Care Taker", "Operator (Steel Plant)", "Operator Advanced Machine Tool", "Operator Blast Furnace Iron Making Equipments", "Operator Coal Handling Equipment", "Operator Coke Ovens Battery Equipments", "Operator Cum Mechanic Pollution Control Equipment", "Operator Locomotive and Rail Cranes in Steel Plant", "Operator Material Handling at Raw Material Handling Plant", "Operator PLC System", "Operator Rolling Mills Equipment (Long Products)", "Operator Sinter Plant Equipments", "Operator Steel Melting Equipments", "Operator-cum-Mechanic Power Plant", "Optical Worker", "Painter (General)", "Painter (Marine)", "Pattern Maker", "Photographer", "Pipe Fitter", "Plastic Mould Maker", "Plastic Processing Operator", "Plate Maker (Lithographic)", "PLC Operator", "Plumber", "Power Electrician", "Pre or Preparatory School Management (Assistant)", "Printing Textile", "Process Cameraman", "Process Plant Operator", "Programming and Systems Administration Assistant", "Pruner Tea Gardens", "Pump Operator Cum Mechanic", "Quality Assurance Assistant", "Receptionist/Hotel Clerk/ Front Office Assistant", "Retoucher Lithographic", "Rigger", "Sales Person (Retail)", "Sanitary Hardware Fitter", "Screen Printing", "Secretarial Assistant", "Senior Sales Person (Retail)", "Sheet Metal Worker", "Shipwright (Steel)", "Shipwright (Wood)", "Shirts and Trousers Maker", "Shotfirer/Blaster (Mines)", "Sirdar (Colliery)", "Sports Goods Maker (Leather)", "Sports Goods Maker (Wood)", "Steam Turbine-cum-Auxiliary Plant Operator", "Steel Melting Hand", "Stenographer (English)", "Stenographer (Hindi)", "Steward", "Stockman (Dairy)", "Structural Welder", "Surveyor", "Switch Board Attendant", "Tailor (General)", "Tailor (Men)", "Tailor (Women)", "Technician Fabricator", "Technician Television and Audio System", "Technician(Automotive Manufacturing)", "Tenter (Drawing Speed/Fly Frames)", "TIG/MIG Welder", "Tool and Die Maker (Dies and Moulds)", "Tool and Die Maker (Press Tools, Jigs and Fixtures)", "Tourist Guide", "Turner", "Tyre Repairer", "Upholsterer", "Utility Operator", "Weaver", "Welder (Gas & Electric)", "Welder (Pipe and Pressure Vessels)", "Winder (Textile)", "Wireman", "Wood Handicrafts Worker"];
+
+        var CITS = ["Architectural Assistantship", "Bamboo Works", "Carpenter", "Computer Hardware & Networking Maintenance", "Computer Software Application", "Cosmetology", "Desktop Publishing Operator", "Draughtsman (Civil)", "Draughtsman (Mechanical)", "Dress Making", "Electrician & Wireman", "Electronics Mechanic", "Fashion Design Technology", "Fitter", "Food Beverage", "Foundryman", "Fruit and Vegetable Processor", "Instrument Mechanic", "Machinist (Grinder)", "Machinist & Operator Advance Machine Tool", "Mechanic Agricultural Machinery", "Mechanic Diesel", "Mechanic Machine Tool Maintenance", "Mechanic Motor Vehicle", "Mechanic Refrigeration & Air Conditioning", "Mechanic Tractor", "Milk & Milk Products", "Office Management", "Plumber", "Reading of Drawing & Arithmetic", "Sewing Technology", "Sheet Metal Worker", "Surface Ornamentation Techniques", "Tool & Die Maker", "Turner", "Welder (Gas & Electric)"];
+
+
+        $("#select_course").change(function () {
+
+            var selected_course = $(this).val();
+            var optionsList;
+            // alert(selected_course);
+            var htmlString = "";
+
+            switch (selected_course) {
+                case "CTS":
+                    optionsList = CTS;
+                    break;
+                case "ATS":
+                    optionsList = ATS;
+                    break;
+                case "CITS":
+                    optionsList = CITS;
+                    break;
+            }
+
+
+            for (var i = 0; i < optionsList.length; i++) {
+                htmlString = htmlString + "<option value='" + optionsList[i] + "'>" + optionsList[i] + "</option>";
+            }
+            $("#select_trade").html(htmlString);
+
+        });
+    </script>
+
+
+    </div><!-- Row END -->
+    </div>
+</section>
+<!-- =======================
+Page content END -->
